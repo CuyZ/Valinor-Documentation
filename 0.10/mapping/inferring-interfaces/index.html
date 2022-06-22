@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://valinor.cuyz.io/mapping/inferring-interfaces/">
+        <link rel="canonical" href="https://valinor.cuyz.io/latest/mapping/inferring-interfaces/">
       
       <link rel="icon" href="../../img/valinor-icon.svg">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.3">
@@ -46,10 +46,10 @@
     
 <meta name="description" content="PHP library that helps to map any input into a strongly-typed value object structure.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://valinor.cuyz.io/">
+<meta property="og:url" content="https://valinor.cuyz.io/latest">
 <meta property="og:title" content="Valinor • PHP object mapper with strong type support">
 <meta property="og:description" content="PHP library that helps to map any input into a strongly-typed value object structure.">
-<meta property="og:image" content="https://valinor.cuyz.io/img/valinor-banner.png">
+<meta property="og:image" content="https://valinor.cuyz.io/latestimg/valinor-banner.png">
 
   </head>
   
@@ -141,39 +141,6 @@
       </form>
     
     
-    
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initializing search
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
     
     
       <div class="md-header__source">
@@ -591,43 +558,49 @@ provided in the mapper builder, using the method <code>infer()</code>.</p>
 <p>The callback given to this method must return the name of a class that
 implements the interface. Any arguments can be required by the callback; they
 will be mapped properly using the given source.</p>
+<p>If the callback can return several class names, it needs to provide a return
+signature with the list of all class-strings that can be returned (see below).</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">$mapper</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="o">-&gt;</span><span class="na">infer</span><span class="p">(</span><span class="nx">UuidInterface</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="nx">fn</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">MyUuid</span><span class="o">::</span><span class="na">class</span><span class="p">)</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="o">-&gt;</span><span class="na">infer</span><span class="p">(</span><span class="nx">SomeInterface</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="nx">fn</span> <span class="p">(</span><span class="nx">string</span> <span class="nv">$type</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">match</span><span class="p">(</span><span class="nv">$type</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="s1">&#39;first&#39;</span> <span class="o">=&gt;</span> <span class="nx">FirstImplementation</span><span class="o">::</span><span class="na">class</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="s1">&#39;second&#39;</span> <span class="o">=&gt;</span> <span class="nx">SecondImplementation</span><span class="o">::</span><span class="na">class</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="k">default</span> <span class="o">=&gt;</span> <span class="k">throw</span> <span class="k">new</span> <span class="nx">DomainException</span><span class="p">(</span><span class="s2">&quot;Unhandled type `</span><span class="si">$type</span><span class="s2">`.&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="p">})</span><span class="o">-&gt;</span><span class="na">mapper</span><span class="p">();</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1">// Will return an instance of `FirstImplementation`</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="nx">SomeInterface</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="p">[</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="s1">&#39;type&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;first&#39;</span><span class="p">,</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="s1">&#39;uuid&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;a6868d61-acba-406d-bcff-30ecd8c0ceb6&#39;</span><span class="p">,</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="s1">&#39;someString&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;foo&#39;</span><span class="p">,</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">]);</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c1">// Will return an instance of `SecondImplementation`</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="nx">SomeInterface</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="p">[</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="s1">&#39;type&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;second&#39;</span><span class="p">,</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="s1">&#39;uuid&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;a6868d61-acba-406d-bcff-30ecd8c0ceb6&#39;</span><span class="p">,</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="s1">&#39;someInt&#39;</span> <span class="o">=&gt;</span> <span class="mi">42</span><span class="p">,</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="p">]);</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="k">interface</span> <span class="nx">SomeInterface</span> <span class="p">{}</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="k">final</span> <span class="k">class</span> <span class="nc">FirstImplementation</span> <span class="k">implements</span> <span class="nx">SomeInterface</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="p">{</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    <span class="k">public</span> <span class="nx">readonly</span> <span class="nx">UuidInterface</span> <span class="nv">$uuid</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="o">-&gt;</span><span class="na">infer</span><span class="p">(</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="nx">SomeInterface</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> 
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="sd">/** @return class-string&lt;FirstImplementation|SecondImplementation&gt; */</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="nx">fn</span> <span class="p">(</span><span class="nx">string</span> <span class="nv">$type</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">match</span><span class="p">(</span><span class="nv">$type</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>            <span class="s1">&#39;first&#39;</span> <span class="o">=&gt;</span> <span class="nx">FirstImplementation</span><span class="o">::</span><span class="na">class</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>            <span class="s1">&#39;second&#39;</span> <span class="o">=&gt;</span> <span class="nx">SecondImplementation</span><span class="o">::</span><span class="na">class</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>            <span class="k">default</span> <span class="o">=&gt;</span> <span class="k">throw</span> <span class="k">new</span> <span class="nx">DomainException</span><span class="p">(</span><span class="s2">&quot;Unhandled type `</span><span class="si">$type</span><span class="s2">`.&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        <span class="p">}</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="p">)</span><span class="o">-&gt;</span><span class="na">mapper</span><span class="p">();</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1">// Will return an instance of `FirstImplementation`</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="nx">SomeInterface</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="p">[</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="s1">&#39;type&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;first&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="s1">&#39;uuid&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;a6868d61-acba-406d-bcff-30ecd8c0ceb6&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="s1">&#39;someString&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;foo&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="p">]);</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1">// Will return an instance of `SecondImplementation`</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="nx">SomeInterface</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="p">[</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    <span class="s1">&#39;type&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;second&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    <span class="s1">&#39;uuid&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;a6868d61-acba-406d-bcff-30ecd8c0ceb6&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    <span class="s1">&#39;someInt&#39;</span> <span class="o">=&gt;</span> <span class="mi">42</span><span class="p">,</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="p">]);</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="k">interface</span> <span class="nx">SomeInterface</span> <span class="p">{}</span>
 <a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    <span class="k">public</span> <span class="nx">readonly</span> <span class="nx">string</span> <span class="nv">$someString</span><span class="p">;</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="p">}</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="k">final</span> <span class="k">class</span> <span class="nc">SecondImplementation</span> <span class="k">implements</span> <span class="nx">SomeInterface</span>
-<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="p">{</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>    <span class="k">public</span> <span class="nx">readonly</span> <span class="nx">UuidInterface</span> <span class="nv">$uuid</span><span class="p">;</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="k">final</span> <span class="k">class</span> <span class="nc">FirstImplementation</span> <span class="k">implements</span> <span class="nx">SomeInterface</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="p">{</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>    <span class="k">public</span> <span class="nx">readonly</span> <span class="nx">UuidInterface</span> <span class="nv">$uuid</span><span class="p">;</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>    <span class="k">public</span> <span class="nx">readonly</span> <span class="nx">string</span> <span class="nv">$someString</span><span class="p">;</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="p">}</span>
 <a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
-<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>    <span class="k">public</span> <span class="nx">readonly</span> <span class="nx">int</span> <span class="nv">$someInt</span><span class="p">;</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="p">}</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="k">final</span> <span class="k">class</span> <span class="nc">SecondImplementation</span> <span class="k">implements</span> <span class="nx">SomeInterface</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="p">{</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>    <span class="k">public</span> <span class="nx">readonly</span> <span class="nx">UuidInterface</span> <span class="nv">$uuid</span><span class="p">;</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>    <span class="k">public</span> <span class="nx">readonly</span> <span class="nx">int</span> <span class="nv">$someInt</span><span class="p">;</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="p">}</span>
 </code></pre></div>
 
               
