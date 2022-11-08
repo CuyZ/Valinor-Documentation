@@ -1,0 +1,2623 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://valinor.cuyz.io/latest/changelog/">
+      
+      <link rel="icon" href="../img/valinor-icon.svg">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.3">
+    
+    
+      
+        <title>Changelog - Valinor</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e8d9bf0c.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+<meta name="description" content="PHP library that helps to map any input into a strongly-typed value object structure.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://valinor.cuyz.io/latest/">
+<meta property="og:title" content="Valinor • PHP object mapper with strong type support">
+<meta property="og:description" content="PHP library that helps to map any input into a strongly-typed value object structure.">
+<meta property="og:image" content="https://valinor.cuyz.io/latest/img/valinor-banner.png">
+<meta name="google-site-verification" content="jRlMtdY7DirJakYYX0lFoZvRY5bMuyLnO2ManGu5ciU"/>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#changelog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        <aside class="md-banner md-banner--warning">
+          
+        </aside>
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Valinor" class="md-header__button md-logo" aria-label="Valinor" data-md-component="logo">
+      
+  <img src="../img/valinor-icon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Valinor
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Changelog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CuyZ/Valinor" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CuyZ/Valinor
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Valinor" class="md-nav__button md-logo" aria-label="Valinor" data-md-component="logo">
+      
+  <img src="../img/valinor-icon.svg" alt="logo">
+
+    </a>
+    Valinor
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CuyZ/Valinor" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CuyZ/Valinor
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../credits/" class="md-nav__link">
+        Credits
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Changelog
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Changelog
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#0170-2022-11-08" class="md-nav__link">
+        0.17.0 (2022-11-08)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.17.0 (2022-11-08)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#0160-2022-10-19" class="md-nav__link">
+        0.16.0 (2022-10-19)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.16.0 (2022-10-19)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#0150-2022-10-06" class="md-nav__link">
+        0.15.0 (2022-10-06)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.15.0 (2022-10-06)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#0140-2022-09-01" class="md-nav__link">
+        0.14.0 (2022-09-01)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.14.0 (2022-09-01)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#0130-2022-07-31" class="md-nav__link">
+        0.13.0 (2022-07-31)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.13.0 (2022-07-31)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#0120-2022-07-10" class="md-nav__link">
+        0.12.0 (2022-07-10)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.12.0 (2022-07-10)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#0110-2022-06-23" class="md-nav__link">
+        0.11.0 (2022-06-23)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.11.0 (2022-06-23)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#0100-2022-06-10" class="md-nav__link">
+        0.10.0 (2022-06-10)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.10.0 (2022-06-10)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#090-2022-05-23" class="md-nav__link">
+        0.9.0 (2022-05-23)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.9.0 (2022-05-23)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#080-2022-05-09" class="md-nav__link">
+        0.8.0 (2022-05-09)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.8.0 (2022-05-09)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#070-2022-03-24" class="md-nav__link">
+        0.7.0 (2022-03-24)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.7.0 (2022-03-24)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#060-2022-02-24" class="md-nav__link">
+        0.6.0 (2022-02-24)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.6.0 (2022-02-24)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#050-2022-01-27" class="md-nav__link">
+        0.5.0 (2022-01-27)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.5.0 (2022-01-27)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#040-2022-01-07" class="md-nav__link">
+        0.4.0 (2022-01-07)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.4.0 (2022-01-07)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#030-2021-12-18" class="md-nav__link">
+        0.3.0 (2021-12-18)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.3.0 (2021-12-18)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#020-2021-12-07" class="md-nav__link">
+        0.2.0 (2021-12-07)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.2.0 (2021-12-07)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#011-2021-12-01" class="md-nav__link">
+        0.1.1 (2021-12-01)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.1.1 (2021-12-01)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Usage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Usage" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Usage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validation/" class="md-nav__link">
+        Validation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../message-customization/" class="md-nav__link">
+        Message customization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source/" class="md-nav__link">
+        Source
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Mapping
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Mapping" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Mapping
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mapping/type-strictness/" class="md-nav__link">
+        Type strictness
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mapping/construction-strategy/" class="md-nav__link">
+        Construction strategy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mapping/inferring-interfaces/" class="md-nav__link">
+        Inferring interfaces
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mapping/handled-types/" class="md-nav__link">
+        Handled types
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Other
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Other" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Other
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../other/performance-and-cache/" class="md-nav__link">
+        Performance & caching
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../other/dealing-with-dates/" class="md-nav__link">
+        Dealing with dates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../other/static-analysis/" class="md-nav__link">
+        Static analysis
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#0170-2022-11-08" class="md-nav__link">
+        0.17.0 (2022-11-08)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.17.0 (2022-11-08)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#0160-2022-10-19" class="md-nav__link">
+        0.16.0 (2022-10-19)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.16.0 (2022-10-19)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#0150-2022-10-06" class="md-nav__link">
+        0.15.0 (2022-10-06)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.15.0 (2022-10-06)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#0140-2022-09-01" class="md-nav__link">
+        0.14.0 (2022-09-01)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.14.0 (2022-09-01)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#0130-2022-07-31" class="md-nav__link">
+        0.13.0 (2022-07-31)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.13.0 (2022-07-31)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#0120-2022-07-10" class="md-nav__link">
+        0.12.0 (2022-07-10)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.12.0 (2022-07-10)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#0110-2022-06-23" class="md-nav__link">
+        0.11.0 (2022-06-23)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.11.0 (2022-06-23)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#0100-2022-06-10" class="md-nav__link">
+        0.10.0 (2022-06-10)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.10.0 (2022-06-10)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#090-2022-05-23" class="md-nav__link">
+        0.9.0 (2022-05-23)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.9.0 (2022-05-23)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#080-2022-05-09" class="md-nav__link">
+        0.8.0 (2022-05-09)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.8.0 (2022-05-09)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#070-2022-03-24" class="md-nav__link">
+        0.7.0 (2022-03-24)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.7.0 (2022-03-24)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#060-2022-02-24" class="md-nav__link">
+        0.6.0 (2022-02-24)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.6.0 (2022-02-24)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#050-2022-01-27" class="md-nav__link">
+        0.5.0 (2022-01-27)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.5.0 (2022-01-27)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#040-2022-01-07" class="md-nav__link">
+        0.4.0 (2022-01-07)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.4.0 (2022-01-07)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#030-2021-12-18" class="md-nav__link">
+        0.3.0 (2021-12-18)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.3.0 (2021-12-18)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#020-2021-12-07" class="md-nav__link">
+        0.2.0 (2021-12-07)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.2.0 (2021-12-07)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+        <!-- Table of contents item -->
+<li class="md-nav__item">
+    <a href="#011-2021-12-01" class="md-nav__link">
+        0.1.1 (2021-12-01)
+    </a>
+
+    <!-- Table of contents list -->
+    
+    <nav class="md-nav" aria-label="0.1.1 (2021-12-01)">
+        <ul class="md-nav__list">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        </ul>
+    </nav>
+    
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/CuyZ/Valinor/edit/master/docs/pages/changelog.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+
+<!--- BEGIN HEADER -->
+<h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
+<p>All notable changes to this project will be documented in this file.</p>
+<!--- END HEADER -->
+
+<h2 id="0170-2022-11-08"><a href="https://github.com/CuyZ/Valinor/compare/0.16.0...0.17.0">0.17.0</a> (2022-11-08)<a class="headerlink" href="#0170-2022-11-08" title="Permanent link">&para;</a></h2>
+<h3 id="notable-changes">Notable changes<a class="headerlink" href="#notable-changes" title="Permanent link">&para;</a></h3>
+<p>The main feature introduced in this release is the split of the flexible mode in
+three distinct modes:</p>
+<ol>
+<li><strong>The flexible casting</strong></li>
+</ol>
+<p>Changes the behaviours explained below:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">$flexibleMapper</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="o">-&gt;</span><span class="na">enableFlexibleCasting</span><span class="p">()</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="o">-&gt;</span><span class="na">mapper</span><span class="p">();</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">// ---</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">// Scalar types will accept non-strict values; for instance an</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1">// integer type will accept any valid numeric value like the</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1">// *string* &quot;42&quot;.</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nv">$flexibleMapper</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="s1">&#39;int&#39;</span><span class="p">,</span> <span class="s1">&#39;42&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1">// =&gt; 42</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1">// ---</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1">// List type will accept non-incremental keys.</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="nv">$flexibleMapper</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="s1">&#39;list&lt;int&gt;&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;foo&#39;</span> <span class="o">=&gt;</span> <span class="mi">42</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span> <span class="o">=&gt;</span> <span class="mi">1337</span><span class="p">]);</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c1">// =&gt; [0 =&gt; 42, 1 =&gt; 1338]</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="c1">// ---</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1">// If a value is missing in a source for a node that accepts `null`,</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="c1">// the node will be filled with `null`.</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="nv">$flexibleMapper</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    <span class="s1">&#39;array{foo: string, bar: null|string}&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    <span class="p">[</span><span class="s1">&#39;foo&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;foo&#39;</span><span class="p">]</span> <span class="c1">// `bar` is missing</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="p">);</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="c1">// =&gt; [&#39;foo&#39; =&gt; &#39;foo&#39;, &#39;bar&#39; =&gt; null]</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="c1">// ---</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="c1">// Array and list types will convert `null` or missing values to an</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="c1">// empty array.</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="nv">$flexibleMapper</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>    <span class="s1">&#39;array{foo: string, bar: array&lt;string&gt;}&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>    <span class="p">[</span><span class="s1">&#39;foo&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;foo&#39;</span><span class="p">]</span> <span class="c1">// `bar` is missing</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="p">);</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="c1">// =&gt; [&#39;foo&#39; =&gt; &#39;foo&#39;, &#39;bar&#39; =&gt; []]</span>
+</code></pre></div>
+<ol>
+<li><strong>The superfluous keys</strong></li>
+</ol>
+<p>Superfluous keys in source arrays will be allowed, preventing errors
+   when a value is not bound to any object property/parameter or shaped
+   array element.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="o">-&gt;</span><span class="na">allowSuperfluousKeys</span><span class="p">()</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        <span class="s1">&#39;array{foo: string, bar: int}&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        <span class="p">[</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>            <span class="s1">&#39;foo&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;foo&#39;</span><span class="p">,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>            <span class="s1">&#39;bar&#39;</span> <span class="o">=&gt;</span> <span class="mi">42</span><span class="p">,</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>            <span class="s1">&#39;baz&#39;</span> <span class="o">=&gt;</span> <span class="mf">1337.404</span><span class="p">,</span> <span class="c1">// `baz` will be ignored</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        <span class="p">]</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="p">);</span>
+</code></pre></div>
+<ol>
+<li><strong>The permissive types</strong></li>
+</ol>
+<p>Allows permissive types <code>mixed</code> and <code>object</code> to be used during
+   mapping.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="o">-&gt;</span><span class="na">allowPermissiveTypes</span><span class="p">()</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        <span class="s1">&#39;array{foo: string, bar: mixed}&#39;</span><span class="p">,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="p">[</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>            <span class="s1">&#39;foo&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;foo&#39;</span><span class="p">,</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>            <span class="s1">&#39;bar&#39;</span> <span class="o">=&gt;</span> <span class="mi">42</span><span class="p">,</span> <span class="c1">// Could be any value</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        <span class="p">]</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="p">);</span>
+</code></pre></div>
+<h3 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add support for <code>strict-array</code> type (<a href="https://github.com/CuyZ/Valinor/commit/d456ebe003b1335701c577c256be5df1ad4445e7">d456eb</a>)</li>
+<li>Introduce new callback message formatter (<a href="https://github.com/CuyZ/Valinor/commit/93f898c9a68cea8de3615b20271e93abde83aff3">93f898</a>)</li>
+<li>Introduce new helper class to list messages (<a href="https://github.com/CuyZ/Valinor/commit/513827d5b39b7d122be958f56cf83eb7e743edaa">513827</a>)</li>
+<li>Split mapper flexible mode in three distinct modes (<a href="https://github.com/CuyZ/Valinor/commit/549e5fe183be2191501af8f98df00a84f97ee990">549e5f</a>)</li>
+</ul>
+<h3 id="bug-fixes">Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Allow missing and null value for array node in flexible mode (<a href="https://github.com/CuyZ/Valinor/commit/034f1c51e1d2416624eba99a26da057af3159dda">034f1c</a>)</li>
+<li>Allow missing value for shaped array nullable node in flexible mode (<a href="https://github.com/CuyZ/Valinor/commit/08fb0e17ba952d42fafade5bea0e83461b02ae6e">08fb0e</a>)</li>
+<li>Handle scalar value casting in union types only in flexible mode (<a href="https://github.com/CuyZ/Valinor/commit/752ad9d12eabbb5cd3a8300620838243e7e3335b">752ad9</a>)</li>
+</ul>
+<h3 id="other">Other<a class="headerlink" href="#other" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Do not use <code>uniqid()</code> (<a href="https://github.com/CuyZ/Valinor/commit/b81847839df64006576f54d3bc3cfeadc425f74b">b81847</a>)</li>
+<li>Transform missing source value to <code>null</code> in flexible mode (<a href="https://github.com/CuyZ/Valinor/commit/92a41a1564f32eb39df7f6c20cbead088feebe2b">92a41a</a>)</li>
+</ul>
+<hr />
+<h2 id="0160-2022-10-19"><a href="https://github.com/CuyZ/Valinor/compare/0.15.0...0.16.0">0.16.0</a> (2022-10-19)<a class="headerlink" href="#0160-2022-10-19" title="Permanent link">&para;</a></h2>
+<h3 id="features_1">Features<a class="headerlink" href="#features_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add support for PHP 8.2 (<a href="https://github.com/CuyZ/Valinor/commit/a92360897e8d73fe9509544e61f65afd6b09e5cd">a92360</a>)</li>
+</ul>
+<h3 id="bug-fixes_1">Bug Fixes<a class="headerlink" href="#bug-fixes_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Properly handle quote char in type definition (<a href="https://github.com/CuyZ/Valinor/commit/c71d6aef94b5816e3ff7e14d27a82a65f80f7267">c71d6a</a>)</li>
+</ul>
+<h3 id="other_1">Other<a class="headerlink" href="#other_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Update dependencies (<a href="https://github.com/CuyZ/Valinor/commit/c2de3244938da1f44459762b6f17bd480d6346e6">c2de32</a>)</li>
+</ul>
+<hr />
+<h2 id="0150-2022-10-06"><a href="https://github.com/CuyZ/Valinor/compare/0.14.0...0.15.0">0.15.0</a> (2022-10-06)<a class="headerlink" href="#0150-2022-10-06" title="Permanent link">&para;</a></h2>
+<h3 id="notable-changes_1">Notable changes<a class="headerlink" href="#notable-changes_1" title="Permanent link">&para;</a></h3>
+<p>Two similar features are introduced in this release: constants and enums 
+wildcard notations. This is mainly useful when several cases of an enum or class
+constants share a common prefix.</p>
+<p>Example for class constants:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">final</span> <span class="k">class</span> <span class="nc">SomeClassWithConstants</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="k">public</span> <span class="k">const</span> <span class="no">FOO</span> <span class="o">=</span> <span class="mi">1337</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="k">public</span> <span class="k">const</span> <span class="no">BAR</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span><span class="p">;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="k">public</span> <span class="k">const</span> <span class="no">BAZ</span> <span class="o">=</span> <span class="s1">&#39;baz&#39;</span><span class="p">;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">}</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="nv">$mapper</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">MapperBuilder</span><span class="p">())</span><span class="o">-&gt;</span><span class="na">mapper</span><span class="p">();</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="s1">&#39;SomeClassWithConstants::BA*&#39;</span><span class="p">,</span> <span class="mi">1337</span><span class="p">);</span> <span class="c1">// error</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="s1">&#39;SomeClassWithConstants::BA*&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">);</span> <span class="c1">// ok</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="s1">&#39;SomeClassWithConstants::BA*&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">);</span> <span class="c1">// ok</span>
+</code></pre></div>
+<p>Example for enum:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nx">enum</span> <span class="nx">SomeEnum</span><span class="o">:</span> <span class="nx">string</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="k">case</span> <span class="nx">FOO</span> <span class="o">=</span> <span class="s1">&#39;foo&#39;</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="k">case</span> <span class="nx">BAR</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span><span class="p">;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="k">case</span> <span class="nx">BAZ</span> <span class="o">=</span> <span class="s1">&#39;baz&#39;</span><span class="p">;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">}</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="nv">$mapper</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">MapperBuilder</span><span class="p">())</span><span class="o">-&gt;</span><span class="na">mapper</span><span class="p">();</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="s1">&#39;SomeEnum::BA*&#39;</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">);</span> <span class="c1">// error</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="s1">&#39;SomeEnum::BA*&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">);</span> <span class="c1">// ok</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="nv">$mapper</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="s1">&#39;SomeEnum::BA*&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">);</span> <span class="c1">// ok</span>
+</code></pre></div>
+<h3 id="features_2">Features<a class="headerlink" href="#features_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add support for class constant type (<a href="https://github.com/CuyZ/Valinor/commit/1244c2d68f3478560241e89f74f28b36d6fc2888">1244c2</a>)</li>
+<li>Add support for wildcard in enumeration type (<a href="https://github.com/CuyZ/Valinor/commit/69ebd19ee84cc56cc8c986f1b5aff299e8d62b5c">69ebd1</a>)</li>
+<li>Introduce utility class to build messages (<a href="https://github.com/CuyZ/Valinor/commit/cb87925aac45ca1babea3f34b6cd6e24c9172905">cb8792</a>)</li>
+</ul>
+<h3 id="bug-fixes_2">Bug Fixes<a class="headerlink" href="#bug-fixes_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add return types for cache implementations (<a href="https://github.com/CuyZ/Valinor/commit/0e8f12e5f7ffd2193c8ab772dd98d5e1cc858b59">0e8f12</a>)</li>
+<li>Correctly handle type inferring during mapping (<a href="https://github.com/CuyZ/Valinor/commit/37f96f101d95e843f6a83d7e29c84b945938a691">37f96f</a>)</li>
+<li>Fetch correct node value for children (<a href="https://github.com/CuyZ/Valinor/commit/3ee526cb27816910f5bf27380021fa1399206335">3ee526</a>)</li>
+<li>Improve scalar values casting (<a href="https://github.com/CuyZ/Valinor/commit/212b77fd13c7ead3ba7c0aca165ea3af235b1fa9">212b77</a>)</li>
+<li>Properly handle static anonymous functions (<a href="https://github.com/CuyZ/Valinor/commit/c009ab98cc327c80e6589c22ee0b3c06b56849de">c009ab</a>)</li>
+</ul>
+<h3 id="other_2">Other<a class="headerlink" href="#other_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Import namespace token parser inside library (<a href="https://github.com/CuyZ/Valinor/commit/0b8ca98a2c9051213f3a59be513f16199288d45f">0b8ca9</a>)</li>
+<li>Remove unused code (<a href="https://github.com/CuyZ/Valinor/commit/b2889a3ba022410a1929c969acae8e581f670535">b2889a</a>, <a href="https://github.com/CuyZ/Valinor/commit/de8aa9f4402c7e83a3575a6143eb26b45ea13461">de8aa9</a>)</li>
+<li>Save type token symbols during lexing (<a href="https://github.com/CuyZ/Valinor/commit/ad0f8fee17773ec226bc4b1eb12370bfcd437187">ad0f8f</a>)</li>
+</ul>
+<hr />
+<h2 id="0140-2022-09-01"><a href="https://github.com/CuyZ/Valinor/compare/0.13.0...0.14.0">0.14.0</a> (2022-09-01)<a class="headerlink" href="#0140-2022-09-01" title="Permanent link">&para;</a></h2>
+<h3 id="notable-changes_2">Notable changes<a class="headerlink" href="#notable-changes_2" title="Permanent link">&para;</a></h3>
+<p>Until this release, the behaviour of the date objects creation was very 
+opinionated: a huge list of date formats were tested out, and if one was working
+it was used to create the date.</p>
+<p>This approach resulted in two problems. First, it led to (minor) performance 
+issues, because a lot of date formats were potentially tested for nothing. More
+importantly, it was not possible to define which format(s) were to be allowed
+(and in result deny other formats).</p>
+<p>A new method can now be used in the <code>MapperBuilder</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="c1">// Both `Cookie` and `ATOM` formats will be accepted</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="o">-&gt;</span><span class="na">supportDateFormats</span><span class="p">(</span><span class="nx">DATE_COOKIE</span><span class="p">,</span> <span class="nx">DATE_ATOM</span><span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="nx">DateTimeInterface</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="s1">&#39;Monday, 08-Nov-1971 13:37:42 UTC&#39;</span><span class="p">);</span>
+</code></pre></div>
+<p>Please note that the old behaviour has been removed. From now on, only valid 
+timestamp or ATOM-formatted value will be accepted by default.</p>
+<p>If needed and to help with the migration, the following <strong>deprecated</strong> 
+constructor can be registered to reactivate the previous behaviour:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="o">-&gt;</span><span class="na">registerConstructor</span><span class="p">(</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>        <span class="k">new</span> <span class="nx">\CuyZ\Valinor\Mapper\Object\BackwardCompatibilityDateTimeConstructor</span><span class="p">()</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="p">)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="nx">DateTimeInterface</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="s1">&#39;Monday, 08-Nov-1971 13:37:42 UTC&#39;</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="breaking-changes">⚠ BREAKING CHANGES<a class="headerlink" href="#breaking-changes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Introduce constructor for custom date formats (<a href="https://github.com/CuyZ/Valinor/commit/f232cc06363c447692e3df88129d0d31b506bccc">f232cc</a>)</li>
+</ul>
+<h3 id="features_3">Features<a class="headerlink" href="#features_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Handle abstract constructor registration (<a href="https://github.com/CuyZ/Valinor/commit/c37ac1e25992d8b194b92d70e6a5727f71c665de">c37ac1</a>)</li>
+<li>Introduce attribute <code>DynamicConstructor</code> (<a href="https://github.com/CuyZ/Valinor/commit/e437d9405cdff95b1cd9e644464fe38bf98ceb53">e437d9</a>)</li>
+<li>Introduce helper method to describe supported date formats (<a href="https://github.com/CuyZ/Valinor/commit/11a7ea7252a788f8d9c075872dd82df78788aceb">11a7ea</a>)</li>
+</ul>
+<h3 id="bug-fixes_3">Bug Fixes<a class="headerlink" href="#bug-fixes_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Allow trailing comma in shaped array (<a href="https://github.com/CuyZ/Valinor/commit/bf445b5364e11a91786b547ce14f3fe12043cf32">bf445b</a>)</li>
+<li>Correctly fetch file system cache entries (<a href="https://github.com/CuyZ/Valinor/commit/48208c1ed1ffcc2ec93d9840b721ed6ce5a7670f">48208c</a>)</li>
+<li>Detect invalid constructor handle type (<a href="https://github.com/CuyZ/Valinor/commit/b3cb5927e9578b7519ef773abd0693d186ecaa68">b3cb59</a>)</li>
+<li>Handle classes in a case-sensitive way in type parser (<a href="https://github.com/CuyZ/Valinor/commit/2540741171edce32ace1d59c9410a3bdd1e8e041">254074</a>)</li>
+<li>Handle concurrent cache file creation (<a href="https://github.com/CuyZ/Valinor/commit/fd39aea2a79f216f4e39de52aced905ed75ead0d">fd39ae</a>)</li>
+<li>Handle inherited private constructor in class definition (<a href="https://github.com/CuyZ/Valinor/commit/73b62241b63ed365a90fb5e44876fafa63680177">73b622</a>)</li>
+<li>Handle invalid nodes recursively (<a href="https://github.com/CuyZ/Valinor/commit/a401c2a2d696b62d73f0bcccc7fe5b28180ccf99">a401c2</a>)</li>
+<li>Prevent illegal characters in PSR-16 cache keys (<a href="https://github.com/CuyZ/Valinor/commit/3c4d29901af1419ca39bf05e7d7008c8fe0b5ae6">3c4d29</a>)</li>
+<li>Properly handle callable objects of the same class (<a href="https://github.com/CuyZ/Valinor/commit/ae7ddcf3caa77f2c4b4ad99dcdbb5f609de55335">ae7ddc</a>)</li>
+</ul>
+<h3 id="other_3">Other<a class="headerlink" href="#other_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add singleton usage of <code>ClassStringType</code> (<a href="https://github.com/CuyZ/Valinor/commit/4bc50e3e42d42798b266026827909b28b1ba8258">4bc50e</a>)</li>
+<li>Change <code>ObjectBuilderFactory::for</code> return signature (<a href="https://github.com/CuyZ/Valinor/commit/57849c92e736335ed2f6b9a50344a1a21dd3bc01">57849c</a>)</li>
+<li>Extract native constructor object builder (<a href="https://github.com/CuyZ/Valinor/commit/2b46a60f37966769e3694e743d92382c6e2f8842">2b46a6</a>)</li>
+<li>Fetch attributes for function definition (<a href="https://github.com/CuyZ/Valinor/commit/ec494cec489b18a2344796c105af55a33dc39ba0">ec494c</a>)</li>
+<li>Refactor arguments instantiation (<a href="https://github.com/CuyZ/Valinor/commit/6414e9cf14f5c4bb4337dc2c8f2bfa09b7048fd0">6414e9</a>)</li>
+</ul>
+<hr />
+<h2 id="0130-2022-07-31"><a href="https://github.com/CuyZ/Valinor/compare/0.12.0...0.13.0">0.13.0</a> (2022-07-31)<a class="headerlink" href="#0130-2022-07-31" title="Permanent link">&para;</a></h2>
+<h3 id="notable-changes_3">Notable changes<a class="headerlink" href="#notable-changes_3" title="Permanent link">&para;</a></h3>
+<p><strong>Reworking of messages body and parameters features</strong></p>
+<p>The <code>\CuyZ\Valinor\Mapper\Tree\Message\Message</code> interface is no longer a
+<code>Stringable</code>, however it defines a new method <code>body</code> that must return the body
+of the message, which can contain placeholders that will be replaced by
+parameters.</p>
+<p>These parameters can now be defined by implementing the interface
+<code>\CuyZ\Valinor\Mapper\Tree\Message\HasParameters</code>.</p>
+<p>This leads to the deprecation of the no longer needed interface
+<code>\CuyZ\Valinor\Mapper\Tree\Message\TranslatableMessage</code> which had a confusing
+name.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">final</span> <span class="k">class</span> <span class="nc">SomeException</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="k">extends</span> <span class="nx">DomainException</span> 
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="k">implements</span> <span class="nx">ErrorMessage</span><span class="p">,</span> <span class="nx">HasParameters</span><span class="p">,</span> <span class="nx">HasCode</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="p">{</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="k">private</span> <span class="nx">string</span> <span class="nv">$someParameter</span><span class="p">;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$someParameter</span><span class="p">)</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="p">{</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">();</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">someParameter</span> <span class="o">=</span> <span class="nv">$someParameter</span><span class="p">;</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    <span class="p">}</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    <span class="k">public</span> <span class="k">function</span> <span class="nf">body</span><span class="p">()</span> <span class="o">:</span> <span class="nx">string</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>    <span class="p">{</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>        <span class="k">return</span> <span class="s1">&#39;Some message / {some_parameter} / {source_value}&#39;</span><span class="p">;</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>    <span class="p">}</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>    <span class="k">public</span> <span class="k">function</span> <span class="nf">parameters</span><span class="p">()</span><span class="o">:</span> <span class="k">array</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>    <span class="p">{</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>        <span class="k">return</span> <span class="p">[</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>            <span class="s1">&#39;some_parameter&#39;</span> <span class="o">=&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">someParameter</span><span class="p">,</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>        <span class="p">];</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>    <span class="p">}</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>    <span class="k">public</span> <span class="k">function</span> <span class="nf">code</span><span class="p">()</span> <span class="o">:</span> <span class="nx">string</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>    <span class="p">{</span>
+<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>        <span class="c1">// A unique code that can help to identify the error</span>
+<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>        <span class="k">return</span> <span class="s1">&#39;some_unique_code&#39;</span><span class="p">;</span>
+<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>    <span class="p">}</span>
+<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Handle <code>numeric-string</code> type</strong></p>
+<p>The new <code>numeric-string</code> type can be used in docblocks.</p>
+<p>It will accept any string value that is also numeric.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">(</span><span class="k">new</span> <span class="nx">MapperBuilder</span><span class="p">())</span><span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="s1">&#39;numeric-string&#39;</span><span class="p">,</span> <span class="s1">&#39;42&#39;</span><span class="p">);</span> <span class="c1">// ✅</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">(</span><span class="k">new</span> <span class="nx">MapperBuilder</span><span class="p">())</span><span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="s1">&#39;numeric-string&#39;</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">);</span> <span class="c1">// ❌</span>
+</code></pre></div>
+<p><strong>Better mapping error message</strong></p>
+<p>The message of the exception will now contain more information, especially the
+total number of errors and the source that was given to the mapper. This change
+aims to have a better understanding of what is wrong when debugging.</p>
+<p>Before:</p>
+<p><code>Could not map type `array{foo: string, bar: int}` with the given source.</code></p>
+<p>After:</p>
+<p><code>Could not map type `array{foo: string, bar: int}`. An error occurred at path 
+bar: Value 'some other string' does not match type `int`.</code></p>
+<h3 id="breaking-changes_1">⚠ BREAKING CHANGES<a class="headerlink" href="#breaking-changes_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Rework messages body and parameters features (<a href="https://github.com/CuyZ/Valinor/commit/ad1207153ed5158080f14d7400ed2075b4ff478b">ad1207</a>)</li>
+</ul>
+<h3 id="features_4">Features<a class="headerlink" href="#features_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Allow to declare parameter for message (<a href="https://github.com/CuyZ/Valinor/commit/f61eb553fa8f5f740b0bc32288d3704f42113fbf">f61eb5</a>)</li>
+<li>Display more information in mapping error message (<a href="https://github.com/CuyZ/Valinor/commit/9c1e7c928b5ae518d34e50576e90568110662fc6">9c1e7c</a>)</li>
+<li>Handle numeric string type (<a href="https://github.com/CuyZ/Valinor/commit/96a493469ce69b16683cdb8a44cbbd3faa0ab957">96a493</a>)</li>
+<li>Make <code>MessagesFlattener</code> countable (<a href="https://github.com/CuyZ/Valinor/commit/2c1c7cf38a905a92b97f3770ddc08ef0a8bdb695">2c1c7c</a>)</li>
+</ul>
+<h3 id="bug-fixes_4">Bug Fixes<a class="headerlink" href="#bug-fixes_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Handle native attribute on promoted parameter (<a href="https://github.com/CuyZ/Valinor/commit/897ca9b65e12d0e38c5d6d6776a6bf62bccf2fea">897ca9</a>)</li>
+</ul>
+<h3 id="other_4">Other<a class="headerlink" href="#other_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add fixed value for root node path (<a href="https://github.com/CuyZ/Valinor/commit/0b37b48c60a21ef3e01022d566b8812e13547a72">0b37b4</a>)</li>
+<li>Remove types stringable behavior (<a href="https://github.com/CuyZ/Valinor/commit/b47a1bbb5dd523333007a67c6b47256d0b1bff56">b47a1b</a>)</li>
+</ul>
+<hr />
+<h2 id="0120-2022-07-10"><a href="https://github.com/CuyZ/Valinor/compare/0.11.0...0.12.0">0.12.0</a> (2022-07-10)<a class="headerlink" href="#0120-2022-07-10" title="Permanent link">&para;</a></h2>
+<h3 id="notable-changes_4">Notable changes<a class="headerlink" href="#notable-changes_4" title="Permanent link">&para;</a></h3>
+<p><strong>SECURITY — Userland exception filtering</strong></p>
+<p>See <a href="https://github.com/CuyZ/Valinor/security/advisories/GHSA-5pgm-3j3g-2rc7">advisory GHSA-5pgm-3j3g-2rc7</a> for more information.</p>
+<p>Userland exception thrown in a constructor will not be automatically caught by
+the mapper anymore. This prevents messages with sensible information from 
+reaching the final user — for instance an SQL exception showing a part of a 
+query.</p>
+<p>To allow exceptions to be considered as safe, the new method
+<code>MapperBuilder::filterExceptions()</code> must be used, with caution.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">final</span> <span class="k">class</span> <span class="nc">SomeClass</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="p">{</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="k">private</span> <span class="nx">string</span> <span class="nv">$value</span><span class="p">)</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="p">{</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>        <span class="nx">\Webmozart\Assert\Assert</span><span class="o">::</span><span class="na">startsWith</span><span class="p">(</span><span class="nv">$value</span><span class="p">,</span> <span class="s1">&#39;foo_&#39;</span><span class="p">);</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="p">}</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="p">}</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="k">try</span> <span class="p">{</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>    <span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>        <span class="o">-&gt;</span><span class="na">filterExceptions</span><span class="p">(</span><span class="k">function</span> <span class="p">(</span><span class="nx">Throwable</span> <span class="nv">$exception</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>            <span class="k">if</span> <span class="p">(</span><span class="nv">$exception</span> <span class="nx">instanceof</span> <span class="nx">\Webmozart\Assert\InvalidArgumentException</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>                <span class="k">return</span> <span class="nx">\CuyZ\Valinor\Mapper\Tree\Message\ThrowableMessage</span><span class="o">::</span><span class="na">from</span><span class="p">(</span><span class="nv">$exception</span><span class="p">);</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>            <span class="p">}</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>            <span class="c1">// If the exception should not be caught by this library, it</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>            <span class="c1">// must be thrown again.</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>            <span class="k">throw</span> <span class="nv">$exception</span><span class="p">;</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>        <span class="p">})</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>        <span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>        <span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="nx">SomeClass</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="s1">&#39;bar_baz&#39;</span><span class="p">);</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">\CuyZ\Valinor\Mapper\MappingError</span> <span class="nv">$exception</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>    <span class="c1">// Should print something similar to:</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>    <span class="c1">// &gt; Expected a value to start with &quot;foo_&quot;. Got: &quot;bar_baz&quot;</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>    <span class="k">echo</span> <span class="nv">$exception</span><span class="o">-&gt;</span><span class="na">node</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">messages</span><span class="p">()[</span><span class="mi">0</span><span class="p">];</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Tree node API rework</strong></p>
+<p>The class <code>\CuyZ\Valinor\Mapper\Tree\Node</code> has been refactored to remove access
+to unwanted methods that were not supposed to be part of the public API. Below 
+are a list of all changes:</p>
+<ul>
+<li>
+<p>New methods <code>$node-&gt;sourceFilled()</code> and <code>$node-&gt;sourceValue()</code> allow accessing
+  the source value.</p>
+</li>
+<li>
+<p>The method <code>$node-&gt;value()</code> has been renamed to <code>$node-&gt;mappedValue()</code> and 
+  will throw an exception if the node is not valid.</p>
+</li>
+<li>
+<p>The method <code>$node-&gt;type()</code> now returns a string.</p>
+</li>
+<li>
+<p>The methods <code>$message-&gt;name()</code>, <code>$message-&gt;path()</code>, <code>$message-&gt;type()</code> and 
+  <code>$message-&gt;value()</code> have been deprecated in favor of the new method 
+  <code>$message-&gt;node()</code>.</p>
+</li>
+<li>
+<p>The message parameter <code>{original_value}</code> has been deprecated in favor of
+  <code>{source_value}</code>.</p>
+</li>
+</ul>
+<p><strong>Access removal of several parts of the library public API</strong></p>
+<p>The access to class/function definition, types and exceptions did not add value 
+to the actual goal of the library. Keeping these features under the public API 
+flag causes more maintenance burden whereas revoking their access allows more 
+flexibility with the overall development of the library.</p>
+<h3 id="breaking-changes_2">⚠ BREAKING CHANGES<a class="headerlink" href="#breaking-changes_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Filter userland exceptions to hide potential sensible data (<a href="https://github.com/CuyZ/Valinor/commit/6ce1a439adb1f6ee7e771fe02d454aa91e7b320f">6ce1a4</a>)</li>
+<li>Refactor tree node API (<a href="https://github.com/CuyZ/Valinor/commit/d3b1dcb64ec561cdedffe5ca779341fc9452a858">d3b1dc</a>)</li>
+<li>Remove API access from several parts of library (<a href="https://github.com/CuyZ/Valinor/commit/316d91910d289780a7b791f17b958eae264a6296">316d91</a>)</li>
+<li>Remove node visitor feature (<a href="https://github.com/CuyZ/Valinor/commit/63c87a2cc4c28546f28d51998a93fe89f0885535">63c87a</a>)</li>
+</ul>
+<h3 id="bug-fixes_5">Bug Fixes<a class="headerlink" href="#bug-fixes_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Handle inferring methods with same names properly (<a href="https://github.com/CuyZ/Valinor/commit/dc45dd8ac5ab1126a362350dbc5292a421254d54">dc45dd</a>)</li>
+<li>Process invalid type default value as unresolvable type (<a href="https://github.com/CuyZ/Valinor/commit/7c9ac1dd6d518e5e5f0fc02ee172b12084082d1d">7c9ac1</a>)</li>
+<li>Properly display unresolvable type (<a href="https://github.com/CuyZ/Valinor/commit/3020db20bfa8322e3cb198487851bb5d43ea9894">3020db</a>)</li>
+</ul>
+<h3 id="other_5">Other<a class="headerlink" href="#other_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ignore <code>.idea</code> folder (<a href="https://github.com/CuyZ/Valinor/commit/84ead04f84118d18ad0c557db909b0cd10b65252">84ead0</a>)</li>
+</ul>
+<hr />
+<h2 id="0110-2022-06-23"><a href="https://github.com/CuyZ/Valinor/compare/0.10.0...0.11.0">0.11.0</a> (2022-06-23)<a class="headerlink" href="#0110-2022-06-23" title="Permanent link">&para;</a></h2>
+<h3 id="notable-changes_5">Notable changes<a class="headerlink" href="#notable-changes_5" title="Permanent link">&para;</a></h3>
+<p><strong>Strict mode</strong></p>
+<p>The mapper is now more type-sensitive and will fail in the following situations:</p>
+<ul>
+<li>
+<p>When a value does not match exactly the awaited scalar type, for instance a
+  string <code>"42"</code> given to a node that awaits an integer.</p>
+</li>
+<li>
+<p>When unnecessary array keys are present, for instance mapping an array
+  <code>['foo' =&gt; …, 'bar' =&gt; …, 'baz' =&gt; …]</code> to an object that needs only <code>foo</code> and
+  <code>bar</code>.</p>
+</li>
+<li>
+<p>When permissive types like <code>mixed</code> or <code>object</code> are encountered.</p>
+</li>
+</ul>
+<p>These limitations can be bypassed by enabling the flexible mode:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="o">-&gt;</span><span class="na">flexible</span><span class="p">()</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="o">-&gt;</span><span class="na">mapper</span><span class="p">();</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="s1">&#39;array{foo: int, bar: bool}&#39;</span><span class="p">,</span> <span class="p">[</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>        <span class="s1">&#39;foo&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;42&#39;</span><span class="p">,</span> <span class="c1">// Will be cast from `string` to `int`</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>        <span class="s1">&#39;bar&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;true&#39;</span><span class="p">,</span> <span class="c1">// Will be cast from `string` to `bool`</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>        <span class="s1">&#39;baz&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;…&#39;</span><span class="p">,</span> <span class="c1">// Will be ignored</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    <span class="p">]);</span>
+</code></pre></div>
+<p>When using this library for a provider application — for instance an API 
+endpoint that can be called with a JSON payload — it is recommended to use the
+strict mode. This ensures that the consumers of the API provide the exact 
+awaited data structure, and prevents unknown values to be passed.</p>
+<p>When using this library as a consumer of an external source, it can make sense
+to enable the flexible mode. This allows for instance to convert string numeric 
+values to integers or to ignore data that is present in the source but not
+needed in the application.</p>
+<p><strong>Interface inferring</strong></p>
+<p>It is now mandatory to list all possible class-types that can be inferred by the
+mapper. This change is a step towards the library being able to deliver powerful 
+new features such as compiling a mapper for better performance.</p>
+<p>The existing calls to <code>MapperBuilder::infer</code> that could return several 
+class-names must now add a signature to the callback. The callbacks that require
+no parameter and always return the same class-name can remain unchanged.</p>
+<p>For instance:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nv">$builder</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="c1">// Can remain unchanged</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="o">-&gt;</span><span class="na">infer</span><span class="p">(</span><span class="nx">SomeInterface</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="nx">fn</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">SomeImplementation</span><span class="o">::</span><span class="na">class</span><span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nv">$builder</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="o">-&gt;</span><span class="na">infer</span><span class="p">(</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>        <span class="nx">SomeInterface</span><span class="o">::</span><span class="na">class</span><span class="p">,</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>        <span class="nx">fn</span> <span class="p">(</span><span class="nx">string</span> <span class="nv">$type</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">match</span><span class="p">(</span><span class="nv">$type</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>            <span class="s1">&#39;first&#39;</span> <span class="o">=&gt;</span> <span class="nx">ImplementationA</span><span class="o">::</span><span class="na">class</span><span class="p">,</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>            <span class="s1">&#39;second&#39;</span> <span class="o">=&gt;</span> <span class="nx">ImplementationB</span><span class="o">::</span><span class="na">class</span><span class="p">,</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>            <span class="k">default</span> <span class="o">=&gt;</span> <span class="k">throw</span> <span class="k">new</span> <span class="nx">DomainException</span><span class="p">(</span><span class="s2">&quot;Unhandled `</span><span class="si">$type</span><span class="s2">`.&quot;</span><span class="p">)</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>        <span class="p">}</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>    <span class="p">)</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>    <span class="c1">// …should be modified with:</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>    <span class="o">-&gt;</span><span class="na">infer</span><span class="p">(</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>        <span class="nx">SomeInterface</span><span class="o">::</span><span class="na">class</span><span class="p">,</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>        <span class="sd">/** @return class-string&lt;ImplementationA|ImplementationB&gt; */</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>        <span class="nx">fn</span> <span class="p">(</span><span class="nx">string</span> <span class="nv">$type</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">match</span><span class="p">(</span><span class="nv">$type</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>            <span class="s1">&#39;first&#39;</span> <span class="o">=&gt;</span> <span class="nx">ImplementationA</span><span class="o">::</span><span class="na">class</span><span class="p">,</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>            <span class="s1">&#39;second&#39;</span> <span class="o">=&gt;</span> <span class="nx">ImplementationB</span><span class="o">::</span><span class="na">class</span><span class="p">,</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>            <span class="k">default</span> <span class="o">=&gt;</span> <span class="k">throw</span> <span class="k">new</span> <span class="nx">DomainException</span><span class="p">(</span><span class="s2">&quot;Unhandled `</span><span class="si">$type</span><span class="s2">`.&quot;</span><span class="p">)</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>        <span class="p">}</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>    <span class="p">);</span>
+</code></pre></div>
+<p><strong>Object constructors collision</strong></p>
+<p>All these changes led to a new check that runs on all registered object 
+constructors. If a collision is found between several constructors that have the
+same signature (the same parameter names), an exception will be thrown.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">final</span> <span class="k">class</span> <span class="nc">SomeClass</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="p">{</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">constructorA</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$foo</span><span class="p">,</span> <span class="nx">string</span> <span class="nv">$bar</span><span class="p">)</span><span class="o">:</span> <span class="nx">self</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    <span class="p">{</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>        <span class="c1">// …</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>    <span class="p">}</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">constructorB</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$foo</span><span class="p">,</span> <span class="nx">string</span> <span class="nv">$bar</span><span class="p">)</span><span class="o">:</span> <span class="nx">self</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>    <span class="p">{</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>        <span class="c1">// …</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>    <span class="p">}</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="p">}</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>    <span class="o">-&gt;</span><span class="na">registerConstructor</span><span class="p">(</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>        <span class="nx">SomeClass</span><span class="o">::</span><span class="na">constructorA</span><span class="p">(</span><span class="o">...</span><span class="p">),</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>        <span class="nx">SomeClass</span><span class="o">::</span><span class="na">constructorB</span><span class="p">(</span><span class="o">...</span><span class="p">),</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>    <span class="p">)</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>    <span class="o">-&gt;</span><span class="na">mapper</span><span class="p">();</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>    <span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="nx">SomeClass</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="p">[</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>        <span class="s1">&#39;foo&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;foo&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a>        <span class="s1">&#39;bar&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a>    <span class="p">]);</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a><span class="c1">// Exception: A collision was detected […]</span>
+</code></pre></div>
+<h3 id="breaking-changes_3">⚠ BREAKING CHANGES<a class="headerlink" href="#breaking-changes_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Handle exhaustive list of interface inferring (<a href="https://github.com/CuyZ/Valinor/commit/1b0ff39af650f1c5902ee930f49049042842ec08">1b0ff3</a>)</li>
+<li>Make mapper more strict and allow flexible mode (<a href="https://github.com/CuyZ/Valinor/commit/90dc586018449b15f3b0296241d8cb2d1320d940">90dc58</a>)</li>
+</ul>
+<h3 id="features_5">Features<a class="headerlink" href="#features_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Improve cache warmup (<a href="https://github.com/CuyZ/Valinor/commit/44c5f13b70a14cbe1cb2b917acd127d14b8c7d14">44c5f1</a>)</li>
+</ul>
+<hr />
+<h2 id="0100-2022-06-10"><a href="https://github.com/CuyZ/Valinor/compare/0.9.0...0.10.0">0.10.0</a> (2022-06-10)<a class="headerlink" href="#0100-2022-06-10" title="Permanent link">&para;</a></h2>
+<h3 id="notable-changes_6">Notable changes<a class="headerlink" href="#notable-changes_6" title="Permanent link">&para;</a></h3>
+<p>Documentation is now available at <a href="https://valinor.cuyz.io">valinor.cuyz.io</a>.</p>
+<h3 id="features_6">Features<a class="headerlink" href="#features_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Support mapping to dates with no time (<a href="https://github.com/CuyZ/Valinor/commit/e0a529a7e546c2e3ffb929f819256b90a5f7859a">e0a529</a>)</li>
+</ul>
+<h3 id="bug-fixes_6">Bug Fixes<a class="headerlink" href="#bug-fixes_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Allow declaring promoted parameter type with <code>@var</code> annotation (<a href="https://github.com/CuyZ/Valinor/commit/d8eb4d830bd0817a5de2d61c8cfa81e7e025064a">d8eb4d</a>)</li>
+<li>Allow mapping iterable to shaped array (<a href="https://github.com/CuyZ/Valinor/commit/628baf1294aaf3ce65bc5af969073604e2005af8">628baf</a>)</li>
+</ul>
+<hr />
+<h2 id="090-2022-05-23"><a href="https://github.com/CuyZ/Valinor/compare/0.8.0...0.9.0">0.9.0</a> (2022-05-23)<a class="headerlink" href="#090-2022-05-23" title="Permanent link">&para;</a></h2>
+<h3 id="notable-changes_7">Notable changes<a class="headerlink" href="#notable-changes_7" title="Permanent link">&para;</a></h3>
+<p><strong>Cache injection and warmup</strong></p>
+<p>The cache feature has been revisited, to give more control to the user on how
+and when to use it.</p>
+<p>The method <code>MapperBuilder::withCacheDir()</code> has been deprecated in favor of a new
+method <code>MapperBuilder::withCache()</code> which accepts any PSR-16 compliant
+implementation.</p>
+<blockquote>
+<p><strong>Warning</strong></p>
+<p>These changes lead up to the default cache not being automatically
+registered anymore. If you still want to enable the cache (which you should),
+you will have to explicitly inject it (see below).</p>
+</blockquote>
+<p>A default implementation is provided out of the box, which saves cache entries
+into the file system.</p>
+<p>When the application runs in a development environment, the cache implementation
+should be decorated with <code>FileWatchingCache</code>, which will watch the files of the
+application and invalidate cache entries when a PHP file is modified by a
+developer — preventing the library not behaving as expected when the signature
+of a property or a method changes.</p>
+<p>The cache can be warmed up, for instance in a pipeline during the build and
+deployment of the application — kudos to @boesing for the feature!</p>
+<blockquote>
+<p><strong>Note</strong> The cache has to be registered first, otherwise the warmup will end
+up being useless.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nv">$cache</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\CuyZ\Valinor\Cache\FileSystemCache</span><span class="p">(</span><span class="s1">&#39;path/to/cache-directory&#39;</span><span class="p">);</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="k">if</span> <span class="p">(</span><span class="nv">$isApplicationInDevelopmentEnvironment</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>    <span class="nv">$cache</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\CuyZ\Valinor\Cache\FileWatchingCache</span><span class="p">(</span><span class="nv">$cache</span><span class="p">);</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="p">}</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="nv">$mapperBuilder</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span><span class="o">-&gt;</span><span class="na">withCache</span><span class="p">(</span><span class="nv">$cache</span><span class="p">);</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="c1">// During the build:</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="nv">$mapperBuilder</span><span class="o">-&gt;</span><span class="na">warmup</span><span class="p">(</span><span class="nx">SomeClass</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="nx">SomeOtherClass</span><span class="o">::</span><span class="na">class</span><span class="p">);</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="c1">// In the application:</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="nv">$mapperBuilder</span><span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="nx">SomeClass</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="p">[</span><span class="cm">/* … */</span><span class="p">]);</span>
+</code></pre></div>
+<hr />
+<p><strong>Message formatting &amp; translation</strong></p>
+<p>Major changes have been made to the messages being returned in case of a mapping
+error: the actual texts are now more accurate and show better information.</p>
+<blockquote>
+<p><strong>Warning</strong> </p>
+<p>The method <code>NodeMessage::format</code> has been removed, message formatters should 
+be used instead. If needed, the old behaviour can be retrieved with the
+formatter <code>PlaceHolderMessageFormatter</code>, although it is strongly advised to 
+use the new placeholders feature (see below).</p>
+<p>The signature of the method <code>MessageFormatter::format</code> has changed as well.</p>
+</blockquote>
+<p>It is now also easier to format the messages, for instance when they need to be
+translated. Placeholders can now be used in a message body, and will be replaced 
+with useful information.</p>
+<table>
+<thead>
+<tr>
+<th>Placeholder</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>{message_code}</code></td>
+<td align="left">the code of the message</td>
+</tr>
+<tr>
+<td><code>{node_name}</code></td>
+<td align="left">name of the node to which the message is bound</td>
+</tr>
+<tr>
+<td><code>{node_path}</code></td>
+<td align="left">path of the node to which the message is bound</td>
+</tr>
+<tr>
+<td><code>{node_type}</code></td>
+<td align="left">type of the node to which the message is bound</td>
+</tr>
+<tr>
+<td><code>{original_value}</code></td>
+<td align="left">the source value that was given to the node</td>
+</tr>
+<tr>
+<td><code>{original_message}</code></td>
+<td align="left">the original message before being customized</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">try</span> <span class="p">{</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    <span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>        <span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>        <span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="nx">SomeClass</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="p">[</span><span class="cm">/* … */</span><span class="p">]);</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">\CuyZ\Valinor\Mapper\MappingError</span> <span class="nv">$error</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>    <span class="nv">$node</span> <span class="o">=</span> <span class="nv">$error</span><span class="o">-&gt;</span><span class="na">node</span><span class="p">();</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>    <span class="nv">$messages</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\CuyZ\Valinor\Mapper\Tree\Message\MessagesFlattener</span><span class="p">(</span><span class="nv">$node</span><span class="p">);</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>    <span class="k">foreach</span> <span class="p">(</span><span class="nv">$messages</span> <span class="k">as</span> <span class="nv">$message</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>        <span class="k">if</span> <span class="p">(</span><span class="nv">$message</span><span class="o">-&gt;</span><span class="na">code</span><span class="p">()</span> <span class="o">===</span> <span class="s1">&#39;some_code&#39;</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>            <span class="nv">$message</span> <span class="o">=</span> <span class="nv">$message</span><span class="o">-&gt;</span><span class="na">withBody</span><span class="p">(</span><span class="s1">&#39;new message / {original_message}&#39;</span><span class="p">);</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>        <span class="p">}</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>        <span class="k">echo</span> <span class="nv">$message</span><span class="p">;</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>    <span class="p">}</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a><span class="p">}</span>
+</code></pre></div>
+<p>The messages are formatted using the <a href="https://unicode-org.github.io/icu/">ICU library</a>, enabling the placeholders to
+use advanced syntax to perform proper translations, for instance currency
+support.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">try</span> <span class="p">{</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    <span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span><span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="s1">&#39;int&lt;0, 100&gt;&#39;</span><span class="p">,</span> <span class="mi">1337</span><span class="p">);</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">\CuyZ\Valinor\Mapper\MappingError</span> <span class="nv">$error</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    <span class="nv">$message</span> <span class="o">=</span> <span class="nv">$error</span><span class="o">-&gt;</span><span class="na">node</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">messages</span><span class="p">()[</span><span class="mi">0</span><span class="p">];</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    <span class="k">if</span> <span class="p">(</span><span class="nb">is_numeric</span><span class="p">(</span><span class="nv">$message</span><span class="o">-&gt;</span><span class="na">value</span><span class="p">()))</span> <span class="p">{</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>        <span class="nv">$message</span> <span class="o">=</span> <span class="nv">$message</span><span class="o">-&gt;</span><span class="na">withBody</span><span class="p">(</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>            <span class="s1">&#39;Invalid amount {original_value, number, currency}&#39;</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>        <span class="p">);</span>    
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>    <span class="p">}</span> 
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>    <span class="c1">// Invalid amount: $1,337.00</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>    <span class="k">echo</span> <span class="nv">$message</span><span class="o">-&gt;</span><span class="na">withLocale</span><span class="p">(</span><span class="s1">&#39;en_US&#39;</span><span class="p">);</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>    <span class="c1">// Invalid amount: £1,337.00</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>    <span class="k">echo</span> <span class="nv">$message</span><span class="o">-&gt;</span><span class="na">withLocale</span><span class="p">(</span><span class="s1">&#39;en_GB&#39;</span><span class="p">);</span>
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>    <span class="c1">// Invalid amount: 1 337,00 €</span>
+<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a>    <span class="k">echo</span> <span class="nv">$message</span><span class="o">-&gt;</span><span class="na">withLocale</span><span class="p">(</span><span class="s1">&#39;fr_FR&#39;</span><span class="p">);</span>
+<a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a><span class="p">}</span>
+</code></pre></div>
+<p>See <a href="https://unicode-org.github.io/icu/userguide/format_parse/messages/">ICU documentation</a> for more information on available syntax.</p>
+<blockquote>
+<p><strong>Warning</strong> If the <code>intl</code> extension is not installed, a shim will be
+available to replace the placeholders, but it won't handle advanced syntax as
+described above.</p>
+</blockquote>
+<p>The formatter <code>TranslationMessageFormatter</code> can be used to translate the content
+of messages.</p>
+<p>The library provides a list of all messages that can be returned; this list can
+be filled or modified with custom translations.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nx">\CuyZ\Valinor\Mapper\Tree\Message\Formatter\TranslationMessageFormatter</span><span class="o">::</span><span class="na">default</span><span class="p">()</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    <span class="c1">// Create/override a single entry…</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    <span class="o">-&gt;</span><span class="na">withTranslation</span><span class="p">(</span><span class="s1">&#39;fr&#39;</span><span class="p">,</span> <span class="s1">&#39;some custom message&#39;</span><span class="p">,</span> <span class="s1">&#39;un message personnalisé&#39;</span><span class="p">)</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    <span class="c1">// …or several entries.</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>    <span class="o">-&gt;</span><span class="na">withTranslations</span><span class="p">([</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>        <span class="s1">&#39;some custom message&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>            <span class="s1">&#39;en&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Some custom message&#39;</span><span class="p">,</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>            <span class="s1">&#39;fr&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Un message personnalisé&#39;</span><span class="p">,</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>            <span class="s1">&#39;es&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Un mensaje personalizado&#39;</span><span class="p">,</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>        <span class="p">],</span> 
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>        <span class="s1">&#39;some other message&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>            <span class="c1">// …</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>        <span class="p">],</span> 
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>    <span class="p">])</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>    <span class="o">-&gt;</span><span class="na">format</span><span class="p">(</span><span class="nv">$message</span><span class="p">);</span>
+</code></pre></div>
+<p>It is possible to join several formatters into one formatter by using the
+<code>AggregateMessageFormatter</code>. This instance can then easily be injected in a
+service that will handle messages.</p>
+<p>The formatters will be called in the same order they are given to the aggregate.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\Mapper\Tree\Message\Formatter\AggregateMessageFormatter</span><span class="p">(</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>    <span class="k">new</span> <span class="nx">\CuyZ\Valinor\Mapper\Tree\Message\Formatter\LocaleMessageFormatter</span><span class="p">(</span><span class="s1">&#39;fr&#39;</span><span class="p">),</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>    <span class="k">new</span> <span class="nx">\CuyZ\Valinor\Mapper\Tree\Message\Formatter\MessageMapFormatter</span><span class="p">([</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>        <span class="c1">// …</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>    <span class="p">],</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>    <span class="nx">\CuyZ\Valinor\Mapper\Tree\Message\Formatter\TranslationMessageFormatter</span><span class="o">::</span><span class="na">default</span><span class="p">(),</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="p">))</span><span class="o">-&gt;</span><span class="na">format</span><span class="p">(</span><span class="nv">$message</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="breaking-changes_4">⚠ BREAKING CHANGES<a class="headerlink" href="#breaking-changes_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Improve message customization with formatters (<a href="https://github.com/CuyZ/Valinor/commit/60a66561413fc0d366cae9acf57ac553bb1a919d">60a665</a>)</li>
+<li>Revoke <code>ObjectBuilder</code> API access (<a href="https://github.com/CuyZ/Valinor/commit/11e12624aad2378465122b987e53e76c744d2179">11e126</a>)</li>
+</ul>
+<h3 id="features_7">Features<a class="headerlink" href="#features_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Allow injecting a cache implementation that is used by the mapper (<a href="https://github.com/CuyZ/Valinor/commit/69ad3f47777f2bec4e565b98035f07696cd16d35">69ad3f</a>)</li>
+<li>Extract file watching feature in own cache implementation (<a href="https://github.com/CuyZ/Valinor/commit/2d70efbfbb73dfe02987de82ee7fc5bb38b3e486">2d70ef</a>)</li>
+<li>Improve mapping error messages (<a href="https://github.com/CuyZ/Valinor/commit/05cf4a4a4dc40af735ba12af5bc986ffec015c6c">05cf4a</a>)</li>
+<li>Introduce method to warm the cache up (<a href="https://github.com/CuyZ/Valinor/commit/ccf09fd33433e065ca7ad26cc90e433dc8d1ae84">ccf09f</a>)</li>
+</ul>
+<h3 id="bug-fixes_7">Bug Fixes<a class="headerlink" href="#bug-fixes_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Make interface type match undefined object type (<a href="https://github.com/CuyZ/Valinor/commit/105eef473821f6f6990a080c5e14a78ed5be24db">105eef</a>)</li>
+</ul>
+<h3 id="other_6">Other<a class="headerlink" href="#other_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Change <code>InvalidParameterIndex</code> exception inheritance type (<a href="https://github.com/CuyZ/Valinor/commit/b75adb7c7ceba2382cab5f265d93ed46bcfd8f4e">b75adb</a>)</li>
+<li>Introduce layer for object builder arguments (<a href="https://github.com/CuyZ/Valinor/commit/48f936275e7f8af937e0740cdbbac0f9557ab4a3">48f936</a>)</li>
+</ul>
+<hr />
+<h2 id="080-2022-05-09"><a href="https://github.com/CuyZ/Valinor/compare/0.7.1...0.8.0">0.8.0</a> (2022-05-09)<a class="headerlink" href="#080-2022-05-09" title="Permanent link">&para;</a></h2>
+<h3 id="notable-changes_8">Notable changes<a class="headerlink" href="#notable-changes_8" title="Permanent link">&para;</a></h3>
+<p><strong>Float values handling</strong></p>
+<p>Allows the usage of float values, as follows:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">class</span> <span class="nc">Foo</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="p">{</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    <span class="sd">/** @var 404.42|1337.42 */</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>    <span class="k">public</span> <span class="nx">readonly</span> <span class="nx">float</span> <span class="nv">$value</span><span class="p">;</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<p><strong>Literal boolean <code>true</code> / <code>false</code> values handling</strong></p>
+<p>Thanks @danog for this feature!</p>
+<p>Allows the usage of boolean values, as follows:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">class</span> <span class="nc">Foo</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="p">{</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>    <span class="sd">/** @var int|false */</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>    <span class="k">public</span> <span class="nx">readonly</span> <span class="nx">int</span><span class="o">|</span><span class="nx">bool</span> <span class="nv">$value</span><span class="p">;</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<p><strong>Class string of union of object handling</strong></p>
+<p>Allows to declare several class names in a <code>class-string</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">class</span> <span class="nc">Foo</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="p">{</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>    <span class="sd">/** @var class-string&lt;SomeClass|SomeOtherClass&gt; */</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>    <span class="k">public</span> <span class="nx">readonly</span> <span class="nx">string</span> <span class="nv">$className</span><span class="p">;</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<p><strong>Allow <code>psalm</code> and <code>phpstan</code> prefix in docblocks</strong></p>
+<p>Thanks @boesing for this feature!</p>
+<p>The following annotations are now properly handled: <code>@psalm-param</code>,
+<code>@phpstan-param</code>, <code>@psalm-return</code> and <code>@phpstan-return</code>.</p>
+<p>If one of those is found along with a basic <code>@param</code> or <code>@return</code> annotation, it
+will take precedence over the basic value.</p>
+<h3 id="features_8">Features<a class="headerlink" href="#features_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Allow <code>psalm</code> and <code>phpstan</code> prefix in docblocks (<a href="https://github.com/CuyZ/Valinor/commit/64e0a2d5ac727062c7c9c45f636081d1065f2bb9">64e0a2</a>)</li>
+<li>Handle class string of union of object (<a href="https://github.com/CuyZ/Valinor/commit/b7923bc383f55095683e38a6da760a90df156edd">b7923b</a>)</li>
+<li>Handle filename in function definition (<a href="https://github.com/CuyZ/Valinor/commit/0b042bc495caf30f3a4d6e72547f65dae69282ec">0b042b</a>)</li>
+<li>Handle float value type (<a href="https://github.com/CuyZ/Valinor/commit/790df8a3b8e9b608e33086f673372b8dff7775c7">790df8</a>)</li>
+<li>Handle literal boolean <code>true</code> / <code>false</code> types (<a href="https://github.com/CuyZ/Valinor/commit/afcedf9e56100e3e69c340172b40cd6deb471f64">afcedf</a>)</li>
+<li>Introduce composite types (<a href="https://github.com/CuyZ/Valinor/commit/892f3831c221c93f74edc4ec14b56c281cf2438e">892f38</a>)</li>
+</ul>
+<h3 id="bug-fixes_8">Bug Fixes<a class="headerlink" href="#bug-fixes_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Call value altering function only if value is accepted (<a href="https://github.com/CuyZ/Valinor/commit/2f08e1a9b306a1d1ae0e9636049816a9c8bd0b92">2f08e1</a>)</li>
+<li>Handle function definition cache invalidation when file is modified (<a href="https://github.com/CuyZ/Valinor/commit/511a0dfee8ab51f9d220df03f063aead603298ba">511a0d</a>)</li>
+</ul>
+<h3 id="other_7">Other<a class="headerlink" href="#other_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add configuration for Composer allowed plugins (<a href="https://github.com/CuyZ/Valinor/commit/2f310cf5ab9f36bf98d338a99a536279049d1cef">2f310c</a>)</li>
+<li>Add Psalm configuration file to <code>.gitattributes</code> (<a href="https://github.com/CuyZ/Valinor/commit/9792722e4f17507c73cd243ad3f23053e24278aa">979272</a>)</li>
+<li>Bump dev-dependencies (<a href="https://github.com/CuyZ/Valinor/commit/8443847cb8a7c4810ff8f71cb88487762f1532c1">844384</a>)</li>
+<li>Declare code type in docblocks (<a href="https://github.com/CuyZ/Valinor/commit/03c84a1f09b5e4cc567a5640f660a60db860c23c">03c84a</a>)</li>
+<li>Ignore <code>Polyfill</code> coverage (<a href="https://github.com/CuyZ/Valinor/commit/c08fe5a3c53618a9e67d2aaa5f6c9d51f7d482c9">c08fe5</a>)</li>
+<li>Remove <code>symfony/polyfill-php80</code> dependency (<a href="https://github.com/CuyZ/Valinor/commit/368737921787a12cd0bd04b5161f36c487e62b64">368737</a>)</li>
+</ul>
+<hr />
+<h2 id="070-2022-03-24"><a href="https://github.com/CuyZ/Valinor/compare/0.6.0...0.7.0">0.7.0</a> (2022-03-24)<a class="headerlink" href="#070-2022-03-24" title="Permanent link">&para;</a></h2>
+<h3 id="notable-changes_9">Notable changes<a class="headerlink" href="#notable-changes_9" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Warning</strong> This release introduces a major breaking change that must be
+considered before updating</p>
+</blockquote>
+<p><strong>Constructor registration</strong></p>
+<p><strong>The automatic named constructor discovery has been disabled</strong>. It is now
+mandatory to explicitly register custom constructors that can be used by the
+mapper.</p>
+<p>This decision was made because of a security issue reported by @Ocramius and
+described in advisory <a href="https://github.com/CuyZ/Valinor/security/advisories/GHSA-5pgm-3j3g-2rc7">advisory GHSA-xhr8-mpwq-2rr2</a>.</p>
+<p>As a result, existing code must list all named constructors that were previously
+automatically used by the mapper, and registerer them using the
+method <code>MapperBuilder::registerConstructor()</code>.</p>
+<p>The method <code>MapperBuilder::bind()</code> has been deprecated in favor of the method
+above that should be used instead.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">final</span> <span class="k">class</span> <span class="nc">SomeClass</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="p">{</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>    <span class="k">public</span> <span class="k">static</span> <span class="k">function</span> <span class="nf">namedConstructor</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$foo</span><span class="p">)</span><span class="o">:</span> <span class="nx">self</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>    <span class="p">{</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>        <span class="c1">// …</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>    <span class="p">}</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="p">}</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>    <span class="o">-&gt;</span><span class="na">registerConstructor</span><span class="p">(</span>
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>        <span class="nx">SomeClass</span><span class="o">::</span><span class="na">namedConstructor</span><span class="p">(</span><span class="o">...</span><span class="p">),</span>
+<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>        <span class="c1">// …or for PHP &lt; 8.1:</span>
+<a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>        <span class="p">[</span><span class="nx">SomeClass</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="s1">&#39;namedConstructor&#39;</span><span class="p">],</span>
+<a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a>    <span class="p">)</span>
+<a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a>    <span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span>
+<a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a>    <span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="nx">SomeClass</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="p">[</span>
+<a id="__codelineno-22-17" name="__codelineno-22-17" href="#__codelineno-22-17"></a>        <span class="c1">// …</span>
+<a id="__codelineno-22-18" name="__codelineno-22-18" href="#__codelineno-22-18"></a>    <span class="p">]);</span>
+</code></pre></div>
+<p>See <a href="https://github.com/CuyZ/Valinor#custom-constructor">documentation</a> for more
+information.</p>
+<hr />
+<p><strong>Source builder</strong></p>
+<p>The <code>Source</code> class is a new entry point for sources that are not plain array or
+iterable. It allows accessing other features like camel-case keys or custom
+paths mapping in a convenient way.</p>
+<p>It should be used as follows:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nv">$source</span> <span class="o">=</span> <span class="nx">\CuyZ\Valinor\Mapper\Source\Source</span><span class="o">::</span><span class="na">json</span><span class="p">(</span><span class="nv">$jsonString</span><span class="p">)</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>    <span class="o">-&gt;</span><span class="na">camelCaseKeys</span><span class="p">()</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>    <span class="o">-&gt;</span><span class="na">map</span><span class="p">([</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>        <span class="s1">&#39;towns&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;cities&#39;</span><span class="p">,</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>        <span class="s1">&#39;towns.*.label&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>    <span class="p">]);</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="nv">$result</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>    <span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>    <span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="nx">SomeClass</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="nv">$source</span><span class="p">);</span>
+</code></pre></div>
+<p>See <a href="https://github.com/CuyZ/Valinor#source">documentation</a> for more details
+about its usage.</p>
+<h3 id="breaking-changes_5">⚠ BREAKING CHANGES<a class="headerlink" href="#breaking-changes_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Change <code>Attributes::ofType</code> return type to <code>array</code> (<a href="https://github.com/CuyZ/Valinor/commit/1a599b0bdf5cf07385ed120817f1a4720064e4dc">1a599b</a>)</li>
+<li>Introduce method to register constructors used during mapping (<a href="https://github.com/CuyZ/Valinor/commit/ecafba3b21cd48f38a5e5d2b5b7f97012342536a">ecafba</a>)</li>
+</ul>
+<h3 id="features_9">Features<a class="headerlink" href="#features_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Introduce a path-mapping source modifier (<a href="https://github.com/CuyZ/Valinor/commit/b7a7d22993eb2758f5beb80e58e599df60258bf3">b7a7d2</a>)</li>
+<li>Introduce a source builder (<a href="https://github.com/CuyZ/Valinor/commit/ad51039cc3f76245eb96fab21a0f2709fcf13bdb">ad5103</a>)</li>
+</ul>
+<h3 id="bug-fixes_9">Bug Fixes<a class="headerlink" href="#bug-fixes_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Handle numeric key with camel case source key modifier (<a href="https://github.com/CuyZ/Valinor/commit/b8a18feadcbb564d80a34ca004c584c56ac0de04">b8a18f</a>)</li>
+<li>Handle parameter default object value compilation (<a href="https://github.com/CuyZ/Valinor/commit/fdef93074c32cf36072446da8a3466a1bf781dbb">fdef93</a>)</li>
+<li>Handle variadic arguments in callable constructors (<a href="https://github.com/CuyZ/Valinor/commit/b646ccecf25ca17ecf8fec4e03bb91748db9527d">b646cc</a>)</li>
+<li>Properly handle alias types for function reflection (<a href="https://github.com/CuyZ/Valinor/commit/e5b5157eaf0b60e10f1060bf22cc4e2bd7d828c7">e5b515</a>)</li>
+</ul>
+<h3 id="other_8">Other<a class="headerlink" href="#other_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add Striker HTML report when running infection (<a href="https://github.com/CuyZ/Valinor/commit/79c7a4563d545d5513f96ec1b5f00abbd50b5881">79c7a4</a>)</li>
+<li>Handle class name in function definition (<a href="https://github.com/CuyZ/Valinor/commit/e2451df2c1857a935a1fc2e88c056d6b414ed924">e2451d</a>)</li>
+<li>Introduce functions container to wrap definition handling (<a href="https://github.com/CuyZ/Valinor/commit/fd11177b06c9740c621155c2f635e012c2f8651e">fd1117</a>)</li>
+</ul>
+<hr />
+<h2 id="060-2022-02-24"><a href="https://github.com/CuyZ/Valinor/compare/0.5.0...0.6.0">0.6.0</a> (2022-02-24)<a class="headerlink" href="#060-2022-02-24" title="Permanent link">&para;</a></h2>
+<h3 id="breaking-changes_6">⚠ BREAKING CHANGES<a class="headerlink" href="#breaking-changes_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Improve interface inferring API (<a href="https://github.com/CuyZ/Valinor/commit/1eb6e6191368453b2c982068a4ceac42681dcbe8">1eb6e6</a>)</li>
+<li>Improve object binding API (<a href="https://github.com/CuyZ/Valinor/commit/6d427088f7141a860ce89e5874fdcdf3abb528b6">6d4270</a>)</li>
+</ul>
+<h3 id="features_10">Features<a class="headerlink" href="#features_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Handle variadic parameters in constructors (<a href="https://github.com/CuyZ/Valinor/commit/b6b329663853aec3597041eea3d936186c410621">b6b329</a>)</li>
+<li>Improve value altering API (<a href="https://github.com/CuyZ/Valinor/commit/422e6a8b272ee1955fef904a43c8bf3721b70ae1">422e6a</a>)</li>
+<li>Introduce a camel case source key modifier (<a href="https://github.com/CuyZ/Valinor/commit/d9465222f463896f84379f6e6f1cfef016a0470d">d94652</a>)</li>
+<li>Introduce function definition repository (<a href="https://github.com/CuyZ/Valinor/commit/b49ebf37be630d4a26e3525ecaedf89fbaa53520">b49ebf</a>)</li>
+<li>Introduce method to get parameter by index (<a href="https://github.com/CuyZ/Valinor/commit/380961247e065155ce2fdd212f8a51bbe82e931e">380961</a>)</li>
+</ul>
+<h3 id="bug-fixes_10">Bug Fixes<a class="headerlink" href="#bug-fixes_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Change license in <code>composer.json</code> (<a href="https://github.com/CuyZ/Valinor/commit/6fdd62dfc2fd68b29b6d915e1f3a81f54e5aea51">6fdd62</a>)</li>
+<li>Ensure native mixed types remain valid (<a href="https://github.com/CuyZ/Valinor/commit/18ccbebb9a4484e4efb4db2c5c9405e853578e7d">18ccbe</a>)</li>
+<li>Remove string keys when unpacking variadic parameter values (<a href="https://github.com/CuyZ/Valinor/commit/cbf4e11154ae428323099db7e689494624f63293">cbf4e1</a>)</li>
+<li>Transform exception thrown during object binding into a message (<a href="https://github.com/CuyZ/Valinor/commit/359e32d03d062610aab4c171a943b28a09cbaf0f">359e32</a>)</li>
+<li>Write temporary cache file inside cache subdirectory (<a href="https://github.com/CuyZ/Valinor/commit/1b80a1df9d64e4c835362b34b1dec9b38ad083d3">1b80a1</a>)</li>
+</ul>
+<h3 id="other_9">Other<a class="headerlink" href="#other_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Check value acceptance in separate node builder (<a href="https://github.com/CuyZ/Valinor/commit/30d4479aefdeb09c7cea20cb4daea1f2b724871b">30d447</a>)</li>
+<li>Narrow union types during node build (<a href="https://github.com/CuyZ/Valinor/commit/06e9dedfd8742be8946b57aedc8d03945eae36fc">06e9de</a>)</li>
+</ul>
+<hr />
+<h2 id="050-2022-01-27"><a href="https://github.com/CuyZ/Valinor/compare/0.4.0...0.5.0">0.5.0</a> (2022-01-27)<a class="headerlink" href="#050-2022-01-27" title="Permanent link">&para;</a></h2>
+<h3 id="features_11">Features<a class="headerlink" href="#features_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Introduce automatic named constructor resolution (<a href="https://github.com/CuyZ/Valinor/commit/718d3c1bc2ea7d28b4b1f6c062addcd1dde8660b">718d3c</a>)</li>
+<li>Set up dependabot for automated weekly dependency upgrades (<a href="https://github.com/CuyZ/Valinor/commit/23b6113869abbcf8d13f4702b69fca59f61b9205">23b611</a>)</li>
+<li>Simplify type signature of <code>TreeMapper#map()</code> (<a href="https://github.com/CuyZ/Valinor/commit/e2800339411b68a24eebc266377184c76ef2701e">e28003</a>)</li>
+</ul>
+<h3 id="bug-fixes_11">Bug Fixes<a class="headerlink" href="#bug-fixes_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Correct regex that detects <a href="https://github.com/internal"><em>@internal</em></a> or <a href="https://github.com/api"><em>@api</em></a> annotations (<a href="https://github.com/CuyZ/Valinor/commit/39f0b71b94fa762ae7eb4cf9b1d7c871a70a31ef">39f0b7</a>)</li>
+<li>Improve type definitions to allow Psalm automatic inferring (<a href="https://github.com/CuyZ/Valinor/commit/f9b04c5c2717eaca1b7bb86fc6311917f05c82b0">f9b04c</a>)</li>
+<li>Return indexed list of attributes when filtering on type (<a href="https://github.com/CuyZ/Valinor/commit/66aa4d688ac162093b9fde3579d08795e1e61cc9">66aa4d</a>)</li>
+</ul>
+<hr />
+<h2 id="040-2022-01-07"><a href="https://github.com/CuyZ/Valinor/compare/0.3.0...0.4.0">0.4.0</a> (2022-01-07)<a class="headerlink" href="#040-2022-01-07" title="Permanent link">&para;</a></h2>
+<h3 id="notable-changes_10">Notable changes<a class="headerlink" href="#notable-changes_10" title="Permanent link">&para;</a></h3>
+<p><strong>Allow mapping to any type</strong></p>
+<p>Previously, the method <code>TreeMapper::map</code> would allow mapping only to an object.
+It is now possible to map to any type handled by the library.</p>
+<p>It is for instance possible to map to an array of objects:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nv">$objects</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">MapperBuilder</span><span class="p">())</span><span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>    <span class="s1">&#39;array&lt;&#39;</span> <span class="o">.</span> <span class="nx">SomeClass</span><span class="o">::</span><span class="na">class</span> <span class="o">.</span> <span class="s1">&#39;&gt;&#39;</span><span class="p">,</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>    <span class="p">[</span><span class="cm">/* … */</span><span class="p">]</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="p">);</span>
+</code></pre></div>
+<p>For simple use-cases, an array shape can be used:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nv">$array</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">MapperBuilder</span><span class="p">())</span><span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>    <span class="s1">&#39;array{foo: string, bar: int}&#39;</span><span class="p">,</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>    <span class="p">[</span><span class="cm">/* … */</span><span class="p">]</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="p">);</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="k">echo</span> <span class="nv">$array</span><span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">];</span>
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a><span class="k">echo</span> <span class="nv">$array</span><span class="p">[</span><span class="s1">&#39;bar&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+</code></pre></div>
+<p>This new feature changes the possible behaviour of the mapper, meaning static
+analysis tools need help to understand the types correctly. An extension for
+PHPStan and a plugin for Psalm are now provided and can be included in a project
+to automatically increase the type coverage.</p>
+<hr />
+<p><strong>Better handling of messages</strong></p>
+<p>When working with messages, it can sometimes be useful to customize the content
+of a message — for instance to translate it.</p>
+<p>The helper
+class <code>\CuyZ\Valinor\Mapper\Tree\Message\Formatter\MessageMapFormatter</code> can be
+used to provide a list of new formats. It can be instantiated with an array
+where each key represents either:</p>
+<ul>
+<li>The code of the message to be replaced</li>
+<li>The content of the message to be replaced</li>
+<li>The class name of the message to be replaced</li>
+</ul>
+<p>If none of those is found, the content of the message will stay unchanged unless
+a default one is given to the class.</p>
+<p>If one of these keys is found, the array entry will be used to replace the
+content of the message. This entry can be either a plain text or a callable that
+takes the message as a parameter and returns a string; it is for instance
+advised to use a callable in cases where a translation service is used — to
+avoid useless greedy operations.</p>
+<p>In any case, the content can contain placeholders that will automatically be
+replaced by, in order:</p>
+<ol>
+<li>The original code of the message</li>
+<li>The original content of the message</li>
+<li>A string representation of the node type</li>
+<li>The name of the node</li>
+<li>The path of the node</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="k">try</span> <span class="p">{</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>    <span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>        <span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>        <span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="nx">SomeClass</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="p">[</span><span class="cm">/* … */</span><span class="p">]);</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">\CuyZ\Valinor\Mapper\MappingError</span> <span class="nv">$error</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>    <span class="nv">$node</span> <span class="o">=</span> <span class="nv">$error</span><span class="o">-&gt;</span><span class="na">node</span><span class="p">();</span>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>    <span class="nv">$messages</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\CuyZ\Valinor\Mapper\Tree\Message\MessagesFlattener</span><span class="p">(</span><span class="nv">$node</span><span class="p">);</span>
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>    <span class="nv">$formatter</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">MessageMapFormatter</span><span class="p">([</span>
+<a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a>        <span class="c1">// Will match if the given message has this exact code</span>
+<a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a>        <span class="s1">&#39;some_code&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;new content / previous code was: %1$s&#39;</span><span class="p">,</span>
+<a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a>
+<a id="__codelineno-26-13" name="__codelineno-26-13" href="#__codelineno-26-13"></a>        <span class="c1">// Will match if the given message has this exact content</span>
+<a id="__codelineno-26-14" name="__codelineno-26-14" href="#__codelineno-26-14"></a>        <span class="s1">&#39;Some message content&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;new content / previous message: %2$s&#39;</span><span class="p">,</span>
+<a id="__codelineno-26-15" name="__codelineno-26-15" href="#__codelineno-26-15"></a>
+<a id="__codelineno-26-16" name="__codelineno-26-16" href="#__codelineno-26-16"></a>        <span class="c1">// Will match if the given message is an instance of `SomeError`</span>
+<a id="__codelineno-26-17" name="__codelineno-26-17" href="#__codelineno-26-17"></a>        <span class="nx">SomeError</span><span class="o">::</span><span class="na">class</span> <span class="o">=&gt;</span> <span class="s1">&#39;</span>
+<a id="__codelineno-26-18" name="__codelineno-26-18" href="#__codelineno-26-18"></a><span class="s1">            - Original code of the message: %1$s</span>
+<a id="__codelineno-26-19" name="__codelineno-26-19" href="#__codelineno-26-19"></a><span class="s1">            - Original content of the message: %2$s</span>
+<a id="__codelineno-26-20" name="__codelineno-26-20" href="#__codelineno-26-20"></a><span class="s1">            - Node type: %3$s</span>
+<a id="__codelineno-26-21" name="__codelineno-26-21" href="#__codelineno-26-21"></a><span class="s1">            - Node name: %4$s</span>
+<a id="__codelineno-26-22" name="__codelineno-26-22" href="#__codelineno-26-22"></a><span class="s1">            - Node path: %5$s</span>
+<a id="__codelineno-26-23" name="__codelineno-26-23" href="#__codelineno-26-23"></a><span class="s1">        &#39;</span><span class="p">,</span>
+<a id="__codelineno-26-24" name="__codelineno-26-24" href="#__codelineno-26-24"></a>
+<a id="__codelineno-26-25" name="__codelineno-26-25" href="#__codelineno-26-25"></a>        <span class="c1">// A callback can be used to get access to the message instance</span>
+<a id="__codelineno-26-26" name="__codelineno-26-26" href="#__codelineno-26-26"></a>        <span class="nx">OtherError</span><span class="o">::</span><span class="na">class</span> <span class="o">=&gt;</span> <span class="k">function</span> <span class="p">(</span><span class="nx">NodeMessage</span> <span class="nv">$message</span><span class="p">)</span><span class="o">:</span> <span class="nx">string</span> <span class="p">{</span>
+<a id="__codelineno-26-27" name="__codelineno-26-27" href="#__codelineno-26-27"></a>            <span class="k">if</span> <span class="p">((</span><span class="nx">string</span><span class="p">)</span><span class="nv">$message</span><span class="o">-&gt;</span><span class="na">type</span><span class="p">()</span> <span class="o">===</span> <span class="s1">&#39;string|int&#39;</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-26-28" name="__codelineno-26-28" href="#__codelineno-26-28"></a>                <span class="c1">// …</span>
+<a id="__codelineno-26-29" name="__codelineno-26-29" href="#__codelineno-26-29"></a>            <span class="p">}</span>
+<a id="__codelineno-26-30" name="__codelineno-26-30" href="#__codelineno-26-30"></a>
+<a id="__codelineno-26-31" name="__codelineno-26-31" href="#__codelineno-26-31"></a>            <span class="k">return</span> <span class="s1">&#39;Some message content&#39;</span><span class="p">;</span>
+<a id="__codelineno-26-32" name="__codelineno-26-32" href="#__codelineno-26-32"></a>        <span class="p">},</span>
+<a id="__codelineno-26-33" name="__codelineno-26-33" href="#__codelineno-26-33"></a>
+<a id="__codelineno-26-34" name="__codelineno-26-34" href="#__codelineno-26-34"></a>        <span class="c1">// For greedy operation, it is advised to use a lazy-callback</span>
+<a id="__codelineno-26-35" name="__codelineno-26-35" href="#__codelineno-26-35"></a>        <span class="s1">&#39;bar&#39;</span> <span class="o">=&gt;</span> <span class="nx">fn</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">translator</span><span class="o">-&gt;</span><span class="na">translate</span><span class="p">(</span><span class="s1">&#39;foo.bar&#39;</span><span class="p">),</span>
+<a id="__codelineno-26-36" name="__codelineno-26-36" href="#__codelineno-26-36"></a>    <span class="p">]))</span>
+<a id="__codelineno-26-37" name="__codelineno-26-37" href="#__codelineno-26-37"></a>        <span class="o">-&gt;</span><span class="na">defaultsTo</span><span class="p">(</span><span class="s1">&#39;some default message&#39;</span><span class="p">)</span>
+<a id="__codelineno-26-38" name="__codelineno-26-38" href="#__codelineno-26-38"></a>        <span class="c1">// …or…</span>
+<a id="__codelineno-26-39" name="__codelineno-26-39" href="#__codelineno-26-39"></a>        <span class="o">-&gt;</span><span class="na">defaultsTo</span><span class="p">(</span><span class="nx">fn</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">translator</span><span class="o">-&gt;</span><span class="na">translate</span><span class="p">(</span><span class="s1">&#39;default_message&#39;</span><span class="p">));</span>
+<a id="__codelineno-26-40" name="__codelineno-26-40" href="#__codelineno-26-40"></a>
+<a id="__codelineno-26-41" name="__codelineno-26-41" href="#__codelineno-26-41"></a>    <span class="k">foreach</span> <span class="p">(</span><span class="nv">$messages</span> <span class="k">as</span> <span class="nv">$message</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-26-42" name="__codelineno-26-42" href="#__codelineno-26-42"></a>        <span class="k">echo</span> <span class="nv">$formatter</span><span class="o">-&gt;</span><span class="na">format</span><span class="p">(</span><span class="nv">$message</span><span class="p">);</span>    
+<a id="__codelineno-26-43" name="__codelineno-26-43" href="#__codelineno-26-43"></a>    <span class="p">}</span>
+<a id="__codelineno-26-44" name="__codelineno-26-44" href="#__codelineno-26-44"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<p><strong>Automatic union of objects inferring during mapping</strong></p>
+<p>When the mapper needs to map a source to a union of objects, it will try to
+guess which object it will map to, based on the needed arguments of the objects,
+and the values contained in the source.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="k">final</span> <span class="k">class</span> <span class="nc">UnionOfObjects</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="p">{</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>    <span class="k">public</span> <span class="nx">readonly</span> <span class="nx">SomeFooObject</span><span class="o">|</span><span class="nx">SomeBarObject</span> <span class="nv">$object</span><span class="p">;</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="p">}</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="k">final</span> <span class="k">class</span> <span class="nc">SomeFooObject</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="p">{</span>
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>    <span class="k">public</span> <span class="nx">readonly</span> <span class="nx">string</span> <span class="nv">$foo</span><span class="p">;</span>
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a><span class="p">}</span>
+<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>
+<a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a><span class="k">final</span> <span class="k">class</span> <span class="nc">SomeBarObject</span>
+<a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a><span class="p">{</span>
+<a id="__codelineno-27-13" name="__codelineno-27-13" href="#__codelineno-27-13"></a>    <span class="k">public</span> <span class="nx">readonly</span> <span class="nx">string</span> <span class="nv">$bar</span><span class="p">;</span>
+<a id="__codelineno-27-14" name="__codelineno-27-14" href="#__codelineno-27-14"></a><span class="p">}</span>
+<a id="__codelineno-27-15" name="__codelineno-27-15" href="#__codelineno-27-15"></a>
+<a id="__codelineno-27-16" name="__codelineno-27-16" href="#__codelineno-27-16"></a><span class="c1">// Will map to an instance of `SomeFooObject`</span>
+<a id="__codelineno-27-17" name="__codelineno-27-17" href="#__codelineno-27-17"></a><span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
+<a id="__codelineno-27-18" name="__codelineno-27-18" href="#__codelineno-27-18"></a>    <span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span>
+<a id="__codelineno-27-19" name="__codelineno-27-19" href="#__codelineno-27-19"></a>    <span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="nx">UnionOfObjects</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;foo&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;foo&#39;</span><span class="p">]);</span>
+<a id="__codelineno-27-20" name="__codelineno-27-20" href="#__codelineno-27-20"></a>
+<a id="__codelineno-27-21" name="__codelineno-27-21" href="#__codelineno-27-21"></a><span class="c1">// Will map to an instance of `SomeBarObject`</span>
+<a id="__codelineno-27-22" name="__codelineno-27-22" href="#__codelineno-27-22"></a><span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
+<a id="__codelineno-27-23" name="__codelineno-27-23" href="#__codelineno-27-23"></a>    <span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span>
+<a id="__codelineno-27-24" name="__codelineno-27-24" href="#__codelineno-27-24"></a>    <span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="nx">UnionOfObjects</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;bar&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;bar&#39;</span><span class="p">]);</span>
+</code></pre></div>
+<h3 id="breaking-changes_7">⚠ BREAKING CHANGES<a class="headerlink" href="#breaking-changes_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Add access to root node when error occurs during mapping (<a href="https://github.com/CuyZ/Valinor/commit/54f608e5b1a4bbd508246c063a3e79df48c1ddeb">54f608</a>)</li>
+<li>Allow mapping to any type (<a href="https://github.com/CuyZ/Valinor/commit/b2e810e3ce997181b7cfcc96d2bccb9c56a5bdd8">b2e810</a>)</li>
+<li>Allow object builder to yield arguments without source (<a href="https://github.com/CuyZ/Valinor/commit/8a74147d4c1f78696049c2dfb9acf979ef6e4689">8a7414</a>)</li>
+<li>Wrap node messages in proper class (<a href="https://github.com/CuyZ/Valinor/commit/a805ba0442f9ac8dd6b2499426ffa6fcb190d4be">a805ba</a>)</li>
+</ul>
+<h3 id="features_12">Features<a class="headerlink" href="#features_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Introduce automatic union of objects inferring during mapping (<a href="https://github.com/CuyZ/Valinor/commit/79d7c266ecabc069b11120338ae1e62a8f3dca97">79d7c2</a>)</li>
+<li>Introduce helper class <code>MessageMapFormatter</code> (<a href="https://github.com/CuyZ/Valinor/commit/ddf69efaaa4eeab87126bdc7f43b92d5faa06f46">ddf69e</a>)</li>
+<li>Introduce helper class <code>MessagesFlattener</code> (<a href="https://github.com/CuyZ/Valinor/commit/a97b406154fa5bccc2f874634ed24af69401cd4a">a97b40</a>)</li>
+<li>Introduce helper <code>NodeTraverser</code> for recursive operations on nodes (<a href="https://github.com/CuyZ/Valinor/commit/cc1bc66bbece7f79dfec093e33e96d3e31bca4e9">cc1bc6</a>)</li>
+</ul>
+<h3 id="bug-fixes_12">Bug Fixes<a class="headerlink" href="#bug-fixes_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Handle nested attributes compilation (<a href="https://github.com/CuyZ/Valinor/commit/d2795bc6b9ee53f9896889cabc1006be2586b008">d2795b</a>)</li>
+<li>Treat forbidden mixed type as invalid type (<a href="https://github.com/CuyZ/Valinor/commit/36bd3638c8e48d2c43d247991b8d2055e8ab56bb">36bd36</a>)</li>
+<li>Treat union type resolving error as message (<a href="https://github.com/CuyZ/Valinor/commit/e834cdc5d3384d4295582f8d602b5da5f656e83a">e834cd</a>)</li>
+<li>Use locked package versions for quality assurance workflow (<a href="https://github.com/CuyZ/Valinor/commit/626f135eee5b4954845e954d567babd58f6ca51b">626f13</a>)</li>
+</ul>
+<h3 id="other_10">Other<a class="headerlink" href="#other_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ignore changelog configuration file in git export (<a href="https://github.com/CuyZ/Valinor/commit/85a6a49ce20b96f2e023a7e824b8085ea198fd39">85a6a4</a>)</li>
+<li>Raise PHPStan version (<a href="https://github.com/CuyZ/Valinor/commit/0144bf084a4883ecbdb65155a05b2ea90e7fca61">0144bf</a>)</li>
+</ul>
+<hr />
+<h2 id="030-2021-12-18"><a href="https://github.com/CuyZ/Valinor/compare/0.2.0...0.3.0">0.3.0</a> (2021-12-18)<a class="headerlink" href="#030-2021-12-18" title="Permanent link">&para;</a></h2>
+<h3 id="features_13">Features<a class="headerlink" href="#features_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Handle common database datetime formats (#40) (<a href="https://github.com/CuyZ/Valinor/commit/179ba3df299be62b0eac24a80e9d4d56d0bb5074">179ba3</a>)</li>
+</ul>
+<h3 id="other_11">Other<a class="headerlink" href="#other_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Change Composer scripts calls (<a href="https://github.com/CuyZ/Valinor/commit/0b507c9b330b76e29319dd5933aa5760df3e3c8d">0b507c</a>)</li>
+<li>Raise version of <code>friendsofphp/php-cs-fixer</code> (<a href="https://github.com/CuyZ/Valinor/commit/e5ccbe201b8767066e0e0510e606f9492f3270f1">e5ccbe</a>)</li>
+</ul>
+<hr />
+<h2 id="020-2021-12-07"><a href="https://github.com/CuyZ/Valinor/compare/0.1.1...0.2.0">0.2.0</a> (2021-12-07)<a class="headerlink" href="#020-2021-12-07" title="Permanent link">&para;</a></h2>
+<h3 id="features_14">Features<a class="headerlink" href="#features_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Handle integer range type (<a href="https://github.com/CuyZ/Valinor/commit/9f99a2a1eff3a1a120a9fa80ecb7045eeafdbfd3">9f99a2</a>)</li>
+<li>Handle local type aliasing in class definition (<a href="https://github.com/CuyZ/Valinor/commit/56142dea5b7c2eb7fdd591ede2f2bd0a1dd3e7b4">56142d</a>)</li>
+<li>Handle type alias import in class definition (<a href="https://github.com/CuyZ/Valinor/commit/fa3ce50dfb069a3e908d5abdb59bd70b3b7d3a90">fa3ce5</a>)</li>
+</ul>
+<h3 id="bug-fixes_13">Bug Fixes<a class="headerlink" href="#bug-fixes_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Do not accept shaped array with excessive key(s) (<a href="https://github.com/CuyZ/Valinor/commit/5a578ea4c26e82fe2bea0bbdba821ff2cd2de03d">5a578e</a>)</li>
+<li>Handle integer value match properly (<a href="https://github.com/CuyZ/Valinor/commit/9ee2cc471ebded7b0b4416d1ed245752090f32be">9ee2cc</a>)</li>
+</ul>
+<h3 id="other_12">Other<a class="headerlink" href="#other_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Delete commented code (<a href="https://github.com/CuyZ/Valinor/commit/4f561290b1ba71dc15f1b2806d2ea929429d5910">4f5612</a>)</li>
+<li>Move exceptions to more specific folder (<a href="https://github.com/CuyZ/Valinor/commit/185edf60534391475da4d90a4fec4bab58c9e1c8">185edf</a>)</li>
+<li>Rename <code>GenericAssignerLexer</code> to <code>TypeAliasLexer</code> (<a href="https://github.com/CuyZ/Valinor/commit/680941687b5e0488eebbfc4372162c25fab34bcb">680941</a>)</li>
+<li>Use <code>marcocesarato/php-conventional-changelog</code> for changelog (<a href="https://github.com/CuyZ/Valinor/commit/178aa97687bd1b2de1c21a57b20476629d2de748">178aa9</a>)</li>
+</ul>
+<hr />
+<h2 id="011-2021-12-01"><a href="https://github.com/CuyZ/Valinor/compare/0.1.0...0.1.1">0.1.1</a> (2021-12-01)<a class="headerlink" href="#011-2021-12-01" title="Permanent link">&para;</a></h2>
+<h3 id="breaking-changes_8">⚠ BREAKING CHANGES<a class="headerlink" href="#breaking-changes_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Change license from GPL 3 to MIT (<a href="https://github.com/CuyZ/Valinor/commit/a77b28c5c224f6cb1232ac17de0002bff8e09ad1">a77b28</a>)</li>
+</ul>
+<h3 id="features_15">Features<a class="headerlink" href="#features_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Handle multiline type declaration (<a href="https://github.com/CuyZ/Valinor/commit/d99c59dfb568950be3abda683051ac9b358af78e">d99c59</a>)</li>
+</ul>
+<h3 id="bug-fixes_14">Bug Fixes<a class="headerlink" href="#bug-fixes_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Filter type symbols with strict string comparison (<a href="https://github.com/CuyZ/Valinor/commit/6cdea31bc29e2bdbb2574ee0678e71cb42c4761b">6cdea3</a>)</li>
+<li>Handle correctly iterable source during mapping (<a href="https://github.com/CuyZ/Valinor/commit/dd4624c5e0376cf1c590117dcad10c659a614701">dd4624</a>)</li>
+<li>Handle shaped array integer key (<a href="https://github.com/CuyZ/Valinor/commit/5561d018abb5b237c7cb8385c9a3032c86711738">5561d0</a>)</li>
+<li>Resolve single/double quotes when parsing doc-block type (<a href="https://github.com/CuyZ/Valinor/commit/1c628b66755497a704ae3333abc8782bac8ee02a">1c628b</a>)</li>
+</ul>
+<h3 id="other_13">Other<a class="headerlink" href="#other_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Change PHPStan stub file extension (<a href="https://github.com/CuyZ/Valinor/commit/8fc6af283cebe1b317b9107d4741a5f2bddea095">8fc6af</a>)</li>
+<li>Delete unwanted code (<a href="https://github.com/CuyZ/Valinor/commit/e3e169fb3c05a46a23cdf7c0c989b5c637a0bd6d">e3e169</a>)</li>
+<li>Syntax highlight stub files (#9) (<a href="https://github.com/CuyZ/Valinor/commit/9ea95f43f3b8b750c6c147d25cc77a602a696172">9ea95f</a>)</li>
+<li>Use composer runtime API (<a href="https://github.com/CuyZ/Valinor/commit/1f754a7e77c9cf3faffccddfdc5179ea1f12840b">1f754a</a>)</li>
+</ul>
+<hr />
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../credits/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Credits" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Credits
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../validation/" class="md-footer__link md-footer__link--next" aria-label="Next: Validation" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Validation
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/CuyZ" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://cuyz.io" target="_blank" rel="noopener" title="cuyz.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.1-20.4-4.2-41.8-4.2-64 0-22.2 2.1-43.6 4.2-64h185.4c2.1 20.4 3.3 41.8 3.3 64zm151.9-64c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42.9 3.2-64 0-22-1.1-43.4-3.2-64h123.1zm-10.5-32H376.7c-10-63.86-29.8-117.38-55.3-151.558C399.8 29.09 463.4 85.94 493.4 160zm-149.1 0H167.7c6.1-36.4 15.5-68.62 27-94.65 10.5-23.61 22.2-40.74 33.5-51.54C239.4 3.178 248.7 0 256 0c7.3 0 16.6 3.178 27.8 13.81 11.3 10.8 23 27.93 33.5 51.54 11.5 26.03 20.9 58.25 27 94.65zm-325.69 0C48.59 85.94 112.2 29.09 190.6 8.442 165.1 42.62 145.3 96.14 135.3 160H18.61zm112.59 32c-2.1 20.6-4.1 42-4.1 64 0 21.1 2 43.4 4.1 64H8.065C2.8 299.5 0 278.1 0 256s2.8-43.5 8.065-64H131.2zm63.5 254.6c-11.5-26-20.9-58.2-27-94.6h176.6c-6.1 36.4-15.5 68.6-27 94.6-10.5 23.7-22.2 40.8-33.5 51.6-11.2 10.6-20.5 13.8-28.7 13.8-6.4 0-15.7-3.2-26.9-13.8-11.3-10.8-23-27.9-33.5-51.6zm-4.1 57C112.2 482.9 48.59 426.1 18.61 352H135.3c10 63.9 29.8 117.4 55.3 151.6zm130.8 0c25.5-34.2 45.3-87.7 55.3-151.6h116.7c-30 74.1-93.6 130.9-172 151.6z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.top", "navigation.indexes", "content.code.annotate"], "search": "../assets/javascripts/workers/search.bd0b6b67.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.b88e97c5.min.js"></script>
+      
+    
+  </body>
+</html>
