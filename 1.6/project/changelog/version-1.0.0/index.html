@@ -1,0 +1,1031 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://valinor.cuyz.io/latest/project/changelog/version-1.0.0/">
+      
+      <link rel="icon" href="../../../img/valinor-icon.svg">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.3">
+    
+    
+      
+        <title>Changelog 1.0.0 — 28th of November 2022 - Valinor</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e8d9bf0c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+<meta name="description" content="PHP library that helps to map any input into a strongly-typed value object structure.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://valinor.cuyz.io/latest/">
+<meta property="og:title" content="Valinor • PHP object mapper with strong type support">
+<meta property="og:description" content="PHP library that helps to map any input into a strongly-typed value object structure.">
+<meta property="og:image" content="https://valinor.cuyz.io/latest/img/valinor-banner.png">
+<meta name="google-site-verification" content="jRlMtdY7DirJakYYX0lFoZvRY5bMuyLnO2ManGu5ciU"/>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#changelog-100-28th-of-november-2022" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        <aside class="md-banner md-banner--warning">
+          
+        </aside>
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Valinor" class="md-header__button md-logo" aria-label="Valinor" data-md-component="logo">
+      
+  <img src="../../../img/valinor-icon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Valinor
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Changelog 1.0.0 — 28th of November 2022
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CuyZ/Valinor" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CuyZ/Valinor
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Valinor" class="md-nav__button md-logo" aria-label="Valinor" data-md-component="logo">
+      
+  <img src="../../../img/valinor-icon.svg" alt="logo">
+
+    </a>
+    Valinor
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CuyZ/Valinor" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CuyZ/Valinor
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Usage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Usage" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Usage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../usage/object-construction/" class="md-nav__link">
+        Object construction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../usage/validation-and-error-handling/" class="md-nav__link">
+        Validation & error handling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../usage/type-strictness-and-flexibility/" class="md-nav__link">
+        Type strictness & flexibility
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../usage/type-reference/" class="md-nav__link">
+        Type reference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          How-to
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="How-to" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          How-to
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-to/use-custom-object-constructors/" class="md-nav__link">
+        Use custom object constructors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-to/deal-with-dates/" class="md-nav__link">
+        Deal with dates
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-to/infer-interfaces/" class="md-nav__link">
+        Infer interfaces
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-to/transform-input/" class="md-nav__link">
+        Transform input
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-to/map-arguments-of-a-callable/" class="md-nav__link">
+        Map arguments of a callable
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../how-to/customize-error-messages/" class="md-nav__link">
+        Customize error messages
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Other
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Other" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Other
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/performance-and-caching/" class="md-nav__link">
+        Performance & caching
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/app-and-framework-integration/" class="md-nav__link">
+        App & framework integration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/static-analysis/" class="md-nav__link">
+        Static analysis — PHPStan/Psalm
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Project
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Project" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Project
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../alternatives/" class="md-nav__link">
+        Alternatives
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../credits/" class="md-nav__link">
+        Credits
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notable-changes" class="md-nav__link">
+    Notable changes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrading-from-0x-to-10" class="md-nav__link">
+    Upgrading from 0.x to 1.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#breaking-changes" class="md-nav__link">
+    ⚠ BREAKING CHANGES
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bug-fixes" class="md-nav__link">
+    Bug Fixes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other" class="md-nav__link">
+    Other
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+<a href="https://github.com/CuyZ/Valinor/edit/master/docs/pages/project/changelog/version-1.0.0.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+
+<h1 id="changelog-100-28th-of-november-2022">Changelog 1.0.0 — 28th of November 2022<a class="headerlink" href="#changelog-100-28th-of-november-2022" title="Permanent link">&para;</a></h1>
+<div class="admonition info inline end">
+<p class="admonition-title"><a href="https://github.com/CuyZ/Valinor/releases/tag/1.0.0">See release on GitHub</a></p>
+</div>
+<p>First stable version! 🥳 🎉</p>
+<p>This release marks the end of the initial development phase. The library has 
+been live for <a href="https://github.com/CuyZ/Valinor/commit/396f64a5246ccfe3f6f6d3211bac7f542a9c7fc6">exactly one year</a> at this date and is stable enough to start 
+following the <a href="https://semver.org">semantic versioning</a> — it means that any backward incompatible 
+change (aka breaking change) will lead to a bump of the major version.</p>
+<p>This is the biggest milestone achieved by this project (yet™); I want to thank
+everyone who has been involved to make it possible, especially the 
+<a href="https://github.com/CuyZ/Valinor/graphs/contributors">contributors</a> who submitted high-quality pull requests to improve the library.</p>
+<p>There is also one person that I want to thank even more: my best friend
+<a href="https://github.com/Mopolo/">Nathan</a>, who has always been so supportive with my
+side-projects. Thanks, bro! 🙌</p>
+<p>The last year marked a bigger investment of my time in OSS contributions; I've
+proven to myself that I am able to follow a stable way of managing my engagement
+to this community, and this is why I enabled sponsorship on my profile to allow
+people to <strong>❤️ <a href="https://github.com/sponsors/romm">sponsor my work on GitHub</a></strong> — if you use this library in your
+applications, please consider offering me a 🍺 from time to time! 🤗</p>
+<h2 id="notable-changes">Notable changes<a class="headerlink" href="#notable-changes" title="Permanent link">&para;</a></h2>
+<p><strong>End of PHP 7.4 support</strong></p>
+<p>PHP 7.4 security support <a href="https://www.php.net/supported-versions.php">has ended on the 28th of November
+2022</a>; the minimum version supported
+by this library is now PHP 8.0.</p>
+<p><strong>New mapper to map arguments of a callable</strong></p>
+<p>This new mapper can be used to ensure a source has the right shape before
+calling a function/method.</p>
+<p>The mapper builder can be configured the same way it would be with a tree
+mapper, for instance to customize the type strictness.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">$someFunction</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$foo</span><span class="p">,</span> <span class="nx">int</span> <span class="nv">$bar</span><span class="p">)</span><span class="o">:</span> <span class="nx">string</span> <span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">return</span> <span class="s2">&quot;</span><span class="si">$foo</span><span class="s2"> / </span><span class="si">$bar</span><span class="s2">&quot;</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">};</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">try</span> <span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="nv">$arguments</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="o">-&gt;</span><span class="na">argumentsMapper</span><span class="p">()</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="o">-&gt;</span><span class="na">mapArguments</span><span class="p">(</span><span class="nv">$someFunction</span><span class="p">,</span> <span class="p">[</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>            <span class="s1">&#39;foo&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;some value&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>            <span class="s1">&#39;bar&#39;</span> <span class="o">=&gt;</span> <span class="mi">42</span><span class="p">,</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="p">]);</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="c1">// some value / 42</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="k">echo</span> <span class="nv">$someFunction</span><span class="p">(</span><span class="o">...</span><span class="nv">$arguments</span><span class="p">);</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">\CuyZ\Valinor\Mapper\MappingError</span> <span class="nv">$error</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="c1">// Do something…</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Support for <code>TimeZone</code> objects</strong></p>
+<p>Native <code>TimeZone</code> objects construction is now supported with a proper error
+handling.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">try</span> <span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        <span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        <span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="nx">DateTimeZone</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="s1">&#39;Jupiter/Europa&#39;</span><span class="p">);</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">MappingError</span> <span class="nv">$exception</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="nv">$error</span> <span class="o">=</span> <span class="nv">$exception</span><span class="o">-&gt;</span><span class="na">node</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">messages</span><span class="p">()[</span><span class="mi">0</span><span class="p">];</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="c1">// Value &#39;Jupiter/Europa&#39; is not a valid timezone.</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="k">echo</span> <span class="nv">$error</span><span class="o">-&gt;</span><span class="na">toString</span><span class="p">();</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Mapping object with one property</strong></p>
+<p>When a class needs only one value, the source given to the mapper must match the
+type of the single property/parameter.</p>
+<p>This change aims to bring consistency on how the mapper behaves when mapping an
+object that needs one argument. Before this change, the source could either
+match the needed type, or be an array with a single entry and a key named after
+the argument.</p>
+<p>See example below:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">final</span> <span class="k">class</span> <span class="nc">Identifier</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="k">public</span> <span class="nx">readonly</span> <span class="nx">string</span> <span class="nv">$value</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">}</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">final</span> <span class="k">class</span> <span class="nc">SomeClass</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">{</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="k">public</span> <span class="nx">readonly</span> <span class="nx">Identifier</span> <span class="nv">$identifier</span><span class="p">;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="k">public</span> <span class="nx">readonly</span> <span class="nx">string</span> <span class="nv">$description</span><span class="p">;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">}</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span><span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="nx">SomeClass</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="p">[</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    <span class="s1">&#39;identifier&#39;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s1">&#39;value&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;some-identifier&#39;</span><span class="p">],</span> <span class="c1">// ❌</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    <span class="s1">&#39;description&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Lorem ipsum…&#39;</span><span class="p">,</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="p">]);</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span><span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="nx">SomeClass</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="p">[</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    <span class="s1">&#39;identifier&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;some-identifier&#39;</span><span class="p">,</span> <span class="c1">// ✅</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    <span class="s1">&#39;description&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;Lorem ipsum…&#39;</span><span class="p">,</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="p">]);</span>
+</code></pre></div>
+<h2 id="upgrading-from-0x-to-10">Upgrading from 0.x to 1.0<a class="headerlink" href="#upgrading-from-0x-to-10" title="Permanent link">&para;</a></h2>
+<p>As this is a major release, all deprecated features have been removed, leading
+to an important number of breaking changes.</p>
+<p>You can click on the entries below to get advice on available replacements. </p>
+<details class="tip">
+<summary>Doctrine annotations support removal</summary>
+<p>Doctrine annotations cannot be used anymore, <a href="https://www.php.net/manual/en/language.attributes.overview.php">PHP attributes</a> must be used.</p>
+</details>
+<details class="tip">
+<summary><code>BackwardCompatibilityDateTimeConstructor</code> class removal</summary>
+<p>You must use the method available in the mapper builder, see <a href="../../../how-to/deal-with-dates/">dealing 
+with dates chapter</a>.</p>
+</details>
+<details class="tip">
+<summary>Mapper builder <code>flexible</code> method removal</summary>
+<p>The flexible has been splitted in three disctint modes, see <a href="../../../usage/type-strictness-and-flexibility/">type strictness
+&amp; flexibility chapter</a>.</p>
+</details>
+<details class="tip">
+<summary>Mapper builder <code>withCacheDir</code> method removal</summary>
+<p>You must now register a cache instance directly, see <a href="../../../other/performance-and-caching/">performance &amp; 
+caching chapter</a>.</p>
+</details>
+<details class="tip">
+<summary><code>StaticMethodConstructor</code> class removal</summary>
+<p>You must now register the constructors using the mapper builder, see <a href="../../../how-to/use-custom-object-constructors/">custom
+object constructors chapter</a>.</p>
+</details>
+<details class="tip">
+<summary>Mapper builder <code>bind</code> method removal</summary>
+<p>You must now register the constructors using the mapper builder, see <a href="../../../how-to/use-custom-object-constructors/">custom
+object constructors chapter</a>.</p>
+</details>
+<details class="tip">
+<summary><code>ThrowableMessage</code> class removal</summary>
+<p>You must now use the <code>MessageBuilder</code> class, see <a href="../../../usage/validation-and-error-handling/">error handling chapter</a>.</p>
+</details>
+<details class="tip">
+<summary><code>MessagesFlattener</code> class removal</summary>
+<p>You must now use the <code>Messages</code> class, see <a href="../../../usage/validation-and-error-handling/">error handling chapter</a>.</p>
+</details>
+<details class="tip">
+<summary><code>TranslatableMessage</code> class removal</summary>
+<p>You must now use the <code>HasParameters</code> class, see <a href="../../../usage/validation-and-error-handling/#custom-exception-messages">custom exception chapter</a>.</p>
+</details>
+<details class="tip">
+<summary>Message methods removal</summary>
+<p>The following methods have been removed:</p>
+<ul>
+<li><code>\CuyZ\Valinor\Mapper\Tree\Message\NodeMessage::name()</code></li>
+<li><code>\CuyZ\Valinor\Mapper\Tree\Message\NodeMessage::path()</code></li>
+<li><code>\CuyZ\Valinor\Mapper\Tree\Message\NodeMessage::type()</code></li>
+<li><code>\CuyZ\Valinor\Mapper\Tree\Message\NodeMessage::value()</code></li>
+<li><code>\CuyZ\Valinor\Mapper\Tree\Node::value()</code></li>
+</ul>
+<p>It is still possible to get the wanted values using the method
+<code>\CuyZ\Valinor\Mapper\Tree\Message\NodeMessage::node()</code>.</p>
+<p>The placeholder <code>{original_value}</code> has also been removed, the same value can
+be fetched with <code>{source_value}</code>.</p>
+</details>
+<details class="tip">
+<summary><code>PlaceHolderMessageFormatter</code> class removal</summary>
+<p>Other features are available to format message, see <a href="../../../how-to/customize-error-messages/">error messages
+customization chapter</a>.</p>
+</details>
+<details class="tip">
+<summary><code>Identifier</code> attribute removal</summary>
+<p>This feature has been part of the library since its first public release,
+but it was never documented because it did not fit one of the library's main 
+philosophy which is to be almost entirely decoupled from an application's
+domain layer.</p>
+<p>The feature is entirely removed and not planned to be replaced by an
+alternative, unless the community really feels like there is a need for
+something alike.</p>
+</details>
+<h2 id="breaking-changes">⚠ BREAKING CHANGES<a class="headerlink" href="#breaking-changes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Disallow array when mapping to object with one argument (<a href="https://github.com/CuyZ/Valinor/commit/72cba320f582c7cda63865880a1cbf7ea292d2b1">72cba3</a>)</li>
+<li>Mark tree mapper and arguments mapper as <code>@pure</code> (<a href="https://github.com/CuyZ/Valinor/commit/0d98555b8289248e84c55873bca7bca6968fc6e0">0d9855</a>)</li>
+<li>Remove deprecated backward compatibility datetime constructor (<a href="https://github.com/CuyZ/Valinor/commit/a65e8d91f65004ffefe087f4c7b024678f739e83">a65e8d</a>)</li>
+<li>Remove deprecated class <code>ThrowableMessage</code> (<a href="https://github.com/CuyZ/Valinor/commit/d36ca9887e0a94d7244fba2df7aa7e24d6b11f8d">d36ca9</a>)</li>
+<li>Remove deprecated class to flatten messages (<a href="https://github.com/CuyZ/Valinor/commit/f9ed93e98c09c7a6120c0911e5e5d598eb86a417">f9ed93</a>)</li>
+<li>Remove deprecated interface <code>TranslatableMessage</code> (<a href="https://github.com/CuyZ/Valinor/commit/ceb19729c9a683e4f477857916fcdce7256830ee">ceb197</a>)</li>
+<li>Remove deprecated message methods (<a href="https://github.com/CuyZ/Valinor/commit/e6557dde5255857526c637fab2b2757030a6a413">e6557d</a>)</li>
+<li>Remove deprecated method constructor attribute (<a href="https://github.com/CuyZ/Valinor/commit/d76467194c43c28912e1af3d85a92308e90db64e">d76467</a>)</li>
+<li>Remove deprecated method to enable flexible mode (<a href="https://github.com/CuyZ/Valinor/commit/a2bef3497a535dae78dfb95614aaa2947256380f">a2bef3</a>)</li>
+<li>Remove deprecated method to set cache directory (<a href="https://github.com/CuyZ/Valinor/commit/b0d6d2fc7ddb2cccc99fa182daaa2a980bde7338">b0d6d2</a>)</li>
+<li>Remove deprecated method used to bind a callback (<a href="https://github.com/CuyZ/Valinor/commit/b79ed81253fc8df758e935772fbd0800c3f41317">b79ed8</a>)</li>
+<li>Remove deprecated placeholder message formatter (<a href="https://github.com/CuyZ/Valinor/commit/c2723dac0bf8063dacd7e30b91dbe9f684addbf8">c2723d</a>)</li>
+<li>Remove Doctrine annotations support (<a href="https://github.com/CuyZ/Valinor/commit/66c1829fcb7b7942947fcbfb11d4b1e4d1cfea15">66c182</a>)</li>
+<li>Remove identifier attribute (<a href="https://github.com/CuyZ/Valinor/commit/8a7486aa440aa8068a43fe5b1e3731ce880b9daf">8a7486</a>)</li>
+<li>Remove PHP 7.4 support (<a href="https://github.com/CuyZ/Valinor/commit/5f5a50123be5d5e9f5ebc9ca179bef8a2d6e1a4c">5f5a50</a>)</li>
+<li>Remove support for <code>strict-array</code> type (<a href="https://github.com/CuyZ/Valinor/commit/22c3b4fbaba05b05d834cd0492ede6f484b610ee">22c3b4</a>)</li>
+</ul>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Add constructor for <code>DateTimeZone</code> with error support (<a href="https://github.com/CuyZ/Valinor/commit/a0a4d63d814a95874d7b7a5410d393bbd95329b7">a0a4d6</a>)</li>
+<li>Introduce mapper to map arguments of a callable (<a href="https://github.com/CuyZ/Valinor/commit/9c7e884f13f51842cd038faf61a71467c8d25816">9c7e88</a>)</li>
+</ul>
+<h2 id="bug-fixes">Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Allow mapping <code>null</code> to single node nullable type (<a href="https://github.com/CuyZ/Valinor/commit/0a98ec25122a629bd03cd7e71e0d407cd850fb28">0a98ec</a>)</li>
+<li>Handle single argument mapper properly (<a href="https://github.com/CuyZ/Valinor/commit/d7bf6ab7a9e1e2266d3a9a4755c5042456cbb20a">d7bf6a</a>)</li>
+<li>Handle tree mapper call without argument in PHPStan extension (<a href="https://github.com/CuyZ/Valinor/commit/3f3a0173fa33c3796f80e317aa3fbb0d1255e8d1">3f3a01</a>)</li>
+<li>Handle tree mapper call without argument in Psalm plugin (<a href="https://github.com/CuyZ/Valinor/commit/b425af7ae9511334a536c8ce5919d00c444fa36d">b425af</a>)</li>
+</ul>
+<h2 id="other">Other<a class="headerlink" href="#other" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Activate value altering feature only when callbacks are registered (<a href="https://github.com/CuyZ/Valinor/commit/0f33a5b4f34b02e8e5196d374918af60cee75438">0f33a5</a>)</li>
+<li>Bump <code>psr/simple-cache</code> supported version (<a href="https://github.com/CuyZ/Valinor/commit/e4059a1cc8b7b639a274d5580382090a92a4a911">e4059a</a>)</li>
+<li>Remove <code>@</code> from comments for future PHP versions changes (<a href="https://github.com/CuyZ/Valinor/commit/68774c778a7aed939b20314114e50b14b781968d">68774c</a>)</li>
+<li>Update dependencies (<a href="https://github.com/CuyZ/Valinor/commit/4afcda966bd2e8aae8e2c8004156b3aef9add6a7">4afcda</a>)</li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/CuyZ" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://cuyz.io" target="_blank" rel="noopener" title="cuyz.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.1-20.4-4.2-41.8-4.2-64 0-22.2 2.1-43.6 4.2-64h185.4c2.1 20.4 3.3 41.8 3.3 64zm151.9-64c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42.9 3.2-64 0-22-1.1-43.4-3.2-64h123.1zm-10.5-32H376.7c-10-63.86-29.8-117.38-55.3-151.558C399.8 29.09 463.4 85.94 493.4 160zm-149.1 0H167.7c6.1-36.4 15.5-68.62 27-94.65 10.5-23.61 22.2-40.74 33.5-51.54C239.4 3.178 248.7 0 256 0c7.3 0 16.6 3.178 27.8 13.81 11.3 10.8 23 27.93 33.5 51.54 11.5 26.03 20.9 58.25 27 94.65zm-325.69 0C48.59 85.94 112.2 29.09 190.6 8.442 165.1 42.62 145.3 96.14 135.3 160H18.61zm112.59 32c-2.1 20.6-4.1 42-4.1 64 0 21.1 2 43.4 4.1 64H8.065C2.8 299.5 0 278.1 0 256s2.8-43.5 8.065-64H131.2zm63.5 254.6c-11.5-26-20.9-58.2-27-94.6h176.6c-6.1 36.4-15.5 68.6-27 94.6-10.5 23.7-22.2 40.8-33.5 51.6-11.2 10.6-20.5 13.8-28.7 13.8-6.4 0-15.7-3.2-26.9-13.8-11.3-10.8-23-27.9-33.5-51.6zm-4.1 57C112.2 482.9 48.59 426.1 18.61 352H135.3c10 63.9 29.8 117.4 55.3 151.6zm130.8 0c25.5-34.2 45.3-87.7 55.3-151.6h116.7c-30 74.1-93.6 130.9-172 151.6z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "navigation.top", "navigation.indexes", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.b88e97c5.min.js"></script>
+      
+    
+  </body>
+</html>
