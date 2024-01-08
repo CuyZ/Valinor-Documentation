@@ -216,6 +216,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://valinor.cuyz.io/latest/project/changelog/version-1.8.2/</loc>
+         <lastmod>2024-01-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://valinor.cuyz.io/latest/serialization/common-examples/</loc>
          <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
