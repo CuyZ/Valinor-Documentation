@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://valinor.cuyz.io/latest/project/changelog/version-0.17.0/">
+        <link rel="canonical" href="https://valinor.cuyz.io/latest/project/changelog/version-1.14.3/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>Changelog 0.17.0 — 8th of November 2022 - Valinor</title>
+        <title>Changelog 1.14.3 — 17th of February 2025 - Valinor</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#changelog-0170-8th-of-november-2022" class="md-skip">
+        <a href="#changelog-1143-17th-of-february-2025" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Changelog 0.17.0 — 8th of November 2022
+              Changelog 1.14.3 — 17th of February 2025
             
           </span>
         </div>
@@ -1069,20 +1069,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#notable-changes" class="md-nav__link">
-    Notable changes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
-    Features
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#bug-fixes" class="md-nav__link">
     Bug Fixes
   </a>
@@ -1114,106 +1100,24 @@
   
 
 
-<h1 id="changelog-0170-8th-of-november-2022">Changelog 0.17.0 — 8th of November 2022<a class="headerlink" href="#changelog-0170-8th-of-november-2022" title="Permanent link">&para;</a></h1>
+<h1 id="changelog-1143-17th-of-february-2025">Changelog 1.14.3 — 17th of February 2025<a class="headerlink" href="#changelog-1143-17th-of-february-2025" title="Permanent link">&para;</a></h1>
 <div class="admonition info inline end">
-<p class="admonition-title"><a href="https://github.com/CuyZ/Valinor/releases/tag/0.17.0">See release on GitHub</a></p>
+<p class="admonition-title"><a href="https://github.com/CuyZ/Valinor/releases/tag/1.14.3">See release on GitHub</a></p>
 </div>
-<h2 id="notable-changes">Notable changes<a class="headerlink" href="#notable-changes" title="Permanent link">&para;</a></h2>
-<p>The main feature introduced in this release is the split of the flexible mode in
-three distinct modes:</p>
-<ol>
-<li><strong>The flexible casting</strong></li>
-</ol>
-<p>Changes the behaviours explained below:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nv">$flexibleMapper</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="o">-&gt;</span><span class="na">enableFlexibleCasting</span><span class="p">()</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="o">-&gt;</span><span class="na">mapper</span><span class="p">();</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">// ---</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">// Scalar types will accept non-strict values; for instance an</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1">// integer type will accept any valid numeric value like the</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1">// *string* &quot;42&quot;.</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="nv">$flexibleMapper</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="s1">&#39;int&#39;</span><span class="p">,</span> <span class="s1">&#39;42&#39;</span><span class="p">);</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1">// =&gt; 42</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1">// ---</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1">// List type will accept non-incremental keys.</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="nv">$flexibleMapper</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="s1">&#39;list&lt;int&gt;&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;foo&#39;</span> <span class="o">=&gt;</span> <span class="mi">42</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span> <span class="o">=&gt;</span> <span class="mi">1337</span><span class="p">]);</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c1">// =&gt; [0 =&gt; 42, 1 =&gt; 1338]</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="c1">// ---</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1">// If a value is missing in a source for a node that accepts `null`,</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="c1">// the node will be filled with `null`.</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="nv">$flexibleMapper</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    <span class="s1">&#39;array{foo: string, bar: null|string}&#39;</span><span class="p">,</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    <span class="p">[</span><span class="s1">&#39;foo&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;foo&#39;</span><span class="p">]</span> <span class="c1">// `bar` is missing</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="p">);</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="c1">// =&gt; [&#39;foo&#39; =&gt; &#39;foo&#39;, &#39;bar&#39; =&gt; null]</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="c1">// ---</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="c1">// Array and list types will convert `null` or missing values to an</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="c1">// empty array.</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
-<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="nv">$flexibleMapper</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>    <span class="s1">&#39;array{foo: string, bar: array&lt;string&gt;}&#39;</span><span class="p">,</span>
-<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>    <span class="p">[</span><span class="s1">&#39;foo&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;foo&#39;</span><span class="p">]</span> <span class="c1">// `bar` is missing</span>
-<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="p">);</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="c1">// =&gt; [&#39;foo&#39; =&gt; &#39;foo&#39;, &#39;bar&#39; =&gt; []]</span>
-</code></pre></div>
-<ol>
-<li><strong>The superfluous keys</strong></li>
-</ol>
-<p>Superfluous keys in source arrays will be allowed, preventing errors
-   when a value is not bound to any object property/parameter or shaped
-   array element.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="o">-&gt;</span><span class="na">allowSuperfluousKeys</span><span class="p">()</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        <span class="s1">&#39;array{foo: string, bar: int}&#39;</span><span class="p">,</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        <span class="p">[</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>            <span class="s1">&#39;foo&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;foo&#39;</span><span class="p">,</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>            <span class="s1">&#39;bar&#39;</span> <span class="o">=&gt;</span> <span class="mi">42</span><span class="p">,</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>            <span class="s1">&#39;baz&#39;</span> <span class="o">=&gt;</span> <span class="mf">1337.404</span><span class="p">,</span> <span class="c1">// `baz` will be ignored</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        <span class="p">]</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="p">);</span>
-</code></pre></div>
-<ol>
-<li><strong>The permissive types</strong></li>
-</ol>
-<p>Allows permissive types <code>mixed</code> and <code>object</code> to be used during
-   mapping.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="o">-&gt;</span><span class="na">allowPermissiveTypes</span><span class="p">()</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>        <span class="s1">&#39;array{foo: string, bar: mixed}&#39;</span><span class="p">,</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>        <span class="p">[</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>            <span class="s1">&#39;foo&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;foo&#39;</span><span class="p">,</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>            <span class="s1">&#39;bar&#39;</span> <span class="o">=&gt;</span> <span class="mi">42</span><span class="p">,</span> <span class="c1">// Could be any value</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        <span class="p">]</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="p">);</span>
-</code></pre></div>
-<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<h3 id="bug-fixes">Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Add support for <code>strict-array</code> type (<a href="https://github.com/CuyZ/Valinor/commit/d456ebe003b1335701c577c256be5df1ad4445e7">d456eb</a>)</li>
-<li>Introduce new callback message formatter (<a href="https://github.com/CuyZ/Valinor/commit/93f898c9a68cea8de3615b20271e93abde83aff3">93f898</a>)</li>
-<li>Introduce new helper class to list messages (<a href="https://github.com/CuyZ/Valinor/commit/513827d5b39b7d122be958f56cf83eb7e743edaa">513827</a>)</li>
-<li>Split mapper flexible mode in three distinct modes (<a href="https://github.com/CuyZ/Valinor/commit/549e5fe183be2191501af8f98df00a84f97ee990">549e5f</a>)</li>
+<li>Normalize empty iterable object as empty array in JSON (<a href="https://github.com/CuyZ/Valinor/commit/a22a5379986ab79538ed2971551bd13f6632346a">a22a53</a>)</li>
+<li>Properly handle full namespaced enum type in docblock (<a href="https://github.com/CuyZ/Valinor/commit/eb8816c0bfa200d50bec0346bc86a9f1fe1a6ec4">eb8816</a>)</li>
+<li>Support PHPStan extension for PHPStan v1 and v2 (<a href="https://github.com/CuyZ/Valinor/commit/9f043b6e45a885a5339c69006b894a3f248955cd">9f043b</a>)</li>
 </ul>
-<h2 id="bug-fixes">Bug Fixes<a class="headerlink" href="#bug-fixes" title="Permanent link">&para;</a></h2>
+<h3 id="other">Other<a class="headerlink" href="#other" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Allow missing and null value for array node in flexible mode (<a href="https://github.com/CuyZ/Valinor/commit/034f1c51e1d2416624eba99a26da057af3159dda">034f1c</a>)</li>
-<li>Allow missing value for shaped array nullable node in flexible mode (<a href="https://github.com/CuyZ/Valinor/commit/08fb0e17ba952d42fafade5bea0e83461b02ae6e">08fb0e</a>)</li>
-<li>Handle scalar value casting in union types only in flexible mode (<a href="https://github.com/CuyZ/Valinor/commit/752ad9d12eabbb5cd3a8300620838243e7e3335b">752ad9</a>)</li>
-</ul>
-<h2 id="other">Other<a class="headerlink" href="#other" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Do not use <code>uniqid()</code> (<a href="https://github.com/CuyZ/Valinor/commit/b81847839df64006576f54d3bc3cfeadc425f74b">b81847</a>)</li>
-<li>Transform missing source value to <code>null</code> in flexible mode (<a href="https://github.com/CuyZ/Valinor/commit/92a41a1564f32eb39df7f6c20cbead088feebe2b">92a41a</a>)</li>
+<li>Handle trailing comma in shaped array declaration (<a href="https://github.com/CuyZ/Valinor/commit/1cb4e9536f966dbfc0def26380ebfdc1e9e014cc">1cb4e9</a>)</li>
+<li>Make sure a child shell is not root (<a href="https://github.com/CuyZ/Valinor/commit/ef0b5c950cea2616028fe0dd2dfab31399c7e439">ef0b5c</a>)</li>
+<li>Refactor node builders stack (<a href="https://github.com/CuyZ/Valinor/commit/040b9093f16a7446f6e678ae992754c8170bcad9">040b90</a>)</li>
+<li>Remove <code>ErrorCatcherNodeBuilder</code> (<a href="https://github.com/CuyZ/Valinor/commit/f8eedc944978ecfaaa0487ac3a9068be1e7f8747">f8eedc</a>)</li>
+<li>Remove <code>IterableNodeBuilder</code> (<a href="https://github.com/CuyZ/Valinor/commit/339f106614033c6871137552cfd628b02db0914d">339f10</a>)</li>
+<li>Remove the need to keep a reference to the Shell parent node (<a href="https://github.com/CuyZ/Valinor/commit/070db32a27872be672c565aa3203c6da988b593e">070db3</a>)</li>
 </ul>
 
 
