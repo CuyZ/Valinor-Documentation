@@ -226,6 +226,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://valinor.cuyz.io/latest/project/changelog/version-1.16.1/</loc>
+         <lastmod>2025-05-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://valinor.cuyz.io/latest/project/changelog/version-1.2.0/</loc>
          <lastmod>2025-05-19</lastmod>
          <changefreq>daily</changefreq>
