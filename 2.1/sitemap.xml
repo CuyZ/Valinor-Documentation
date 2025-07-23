@@ -321,6 +321,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://valinor.cuyz.io/latest/project/changelog/version-2.1.1/</loc>
+         <lastmod>2025-07-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://valinor.cuyz.io/latest/serialization/common-transformers-examples/</loc>
          <lastmod>2025-07-23</lastmod>
          <changefreq>daily</changefreq>
