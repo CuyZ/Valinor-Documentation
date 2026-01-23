@@ -1313,7 +1313,7 @@ interface <code>\CuyZ\Valinor\Mapper\Tree\Message\HasParameters</code> that retu
 of string values, using keys as parameters names.</p>
 <p>To help identifying an error, a unique code can be provided by implementing the 
 interface <code>CuyZ\Valinor\Mapper\Tree\Message\HasCode</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">final</span> <span class="k">class</span> <span class="nc">SomeClass</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">final</span> <span class="nx">readonly</span> <span class="k">class</span> <span class="nc">SomeClass</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="k">private</span> <span class="nx">string</span> <span class="nv">$value</span><span class="p">)</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="p">{</span>
@@ -1368,7 +1368,7 @@ interface <code>CuyZ\Valinor\Mapper\Tree\Message\HasCode</code>.</p>
 <h3 id="2-use-provided-message-builder">2. Use provided message builder<a class="headerlink" href="#2-use-provided-message-builder" title="Permanent link">&para;</a></h3>
 <p>The utility class <code>\CuyZ\Valinor\Mapper\Tree\Message\MessageBuilder</code> can be used
 to build a message.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">final</span> <span class="k">class</span> <span class="nc">SomeClass</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">final</span> <span class="nx">readonly</span> <span class="k">class</span> <span class="nc">SomeClass</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">{</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="k">private</span> <span class="nx">string</span> <span class="nv">$value</span><span class="p">)</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="p">{</span>
@@ -1400,7 +1400,7 @@ for instance when using lightweight validation tools like <a href="https://githu
 sensitive information — for instance an SQL exception showing a part of a query
 should never be allowed. Therefore, only an exhaustive list of carefully chosen
 exceptions should be filtered.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">final</span> <span class="k">class</span> <span class="nc">SomeClass</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">final</span> <span class="nx">readonly</span> <span class="k">class</span> <span class="nc">SomeClass</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">{</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span><span class="k">private</span> <span class="nx">string</span> <span class="nv">$value</span><span class="p">)</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="p">{</span>
