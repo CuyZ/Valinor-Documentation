@@ -1,0 +1,2214 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://valinor-php.dev/latest/project/upgrading/">
+      
+      
+        <link rel="prev" href="../../other/static-analysis/">
+      
+      
+        <link rel="next" href="../alternatives/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/valinor-icon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Upgrading - Valinor</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+<meta name="description" content="PHP library that helps to map any input into a strongly-typed value object structure.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://valinor-php.dev/latest/">
+<meta property="og:title" content="Valinor • PHP object mapper with strong type support">
+<meta property="og:description" content="PHP library that helps to map any input into a strongly-typed value object structure.">
+<meta property="og:image" content="https://valinor-php.dev/latest/img/valinor-banner.png">
+<meta name="google-site-verification" content="jRlMtdY7DirJakYYX0lFoZvRY5bMuyLnO2ManGu5ciU"/>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#upgrading-valinor" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Valinor" class="md-header__button md-logo" aria-label="Valinor" data-md-component="logo">
+      
+  <img src="../../img/valinor-icon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Valinor
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Upgrading
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CuyZ/Valinor" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CuyZ/Valinor
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Valinor" class="md-nav__button md-logo" aria-label="Valinor" data-md-component="logo">
+      
+  <img src="../../img/valinor-icon.svg" alt="logo">
+
+    </a>
+    Valinor
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CuyZ/Valinor" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CuyZ/Valinor
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Usage
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/object-construction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Object construction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/validation-and-error-handling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validation & error handling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/type-strictness-and-flexibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Type strictness & flexibility
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/type-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Type reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How-to
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    How-to
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/use-custom-object-constructors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use custom object constructors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/deal-with-dates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deal with dates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/convert-input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Convert input during mapping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/infer-interfaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infer interfaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/map-http-request/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Map an HTTP request
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/map-arguments-of-a-callable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Map arguments of a callable
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/customize-error-messages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customize error messages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/import-formatted-source/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Import JSON, YAML, etc.
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/use-mapper-configurators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use mapper configurators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/use-provided-mapper-configurators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use provided configurators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/common-converters-examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Common converters examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Serialization
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Serialization
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../serialization/normalizer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normalizing data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../serialization/extending-normalizer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extending the normalizer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../serialization/common-transformers-examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Common transformers examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../serialization/normalizing-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normalizing to JSON
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../serialization/use-normalizer-configurators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using normalizer configurators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../serialization/use-provided-normalizer-configurators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using provided configurators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Other
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Other
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/performance-and-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance & caching
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/app-and-framework-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    App & framework integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/static-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Static analysis — PHPStan/Psalm
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Project
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Upgrading
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Upgrading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade-from-1x-to-2x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrade from 1.x to 2.x
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Upgrade from 1.x to 2.x">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changes-to-messageserrors-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changes to messages/errors handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changes-to-messages-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changes to messages codes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introduced-normalizerbuilder-as-the-main-entry-for-normalizers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduced NormalizerBuilder as the main entry for normalizers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed-simple-cache-psr-16-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removed Simple Cache (PSR-16) handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed-mapperbuilderenableflexiblecasting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removed MapperBuilder::enableFlexibleCasting()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed-mapperbuilderalter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removed MapperBuilder::alter()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-pure-markers-to-mapperbuilder-and-normalizerbuilder-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add @pure markers to MapperBuilder and NormalizerBuilder methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed-classes-and-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removed classes and interfaces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-constructors-marked-as-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class constructors marked as @internal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-list-of-breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of breaking changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../alternatives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alternatives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../credits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Credits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Internals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Internals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../internals/benchmarks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Benchmarks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#upgrade-from-1x-to-2x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrade from 1.x to 2.x
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Upgrade from 1.x to 2.x">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changes-to-messageserrors-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changes to messages/errors handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changes-to-messages-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changes to messages codes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introduced-normalizerbuilder-as-the-main-entry-for-normalizers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduced NormalizerBuilder as the main entry for normalizers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed-simple-cache-psr-16-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removed Simple Cache (PSR-16) handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed-mapperbuilderenableflexiblecasting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removed MapperBuilder::enableFlexibleCasting()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed-mapperbuilderalter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removed MapperBuilder::alter()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-pure-markers-to-mapperbuilder-and-normalizerbuilder-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add @pure markers to MapperBuilder and NormalizerBuilder methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed-classes-and-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removed classes and interfaces
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-constructors-marked-as-internal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class constructors marked as @internal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-list-of-breaking-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full list of breaking changes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="upgrading-valinor">Upgrading Valinor<a class="headerlink" href="#upgrading-valinor" title="Permanent link">&para;</a></h1>
+<h2 id="upgrade-from-1x-to-2x">Upgrade from 1.x to 2.x<a class="headerlink" href="#upgrade-from-1x-to-2x" title="Permanent link">&para;</a></h2>
+<p><strong>Summary</strong></p>
+<ul>
+<li><a href="#full-list-of-breaking-changes">TL;DR — Full list of breaking changes</a></li>
+<li><a href="#changes-to-messageserrors-handling">Changes to messages/errors handling</a></li>
+<li><a href="#changes-to-messages-codes">Changes to messages codes</a></li>
+<li><a href="#introduced-normalizerbuilder-as-the-main-entry-for-normalizers">Introduced <code>NormalizerBuilder</code> as the main entry for normalizers</a></li>
+<li><a href="#removed-simple-cache-psr-16-handling">Removed Simple Cache (PSR-16) handling</a></li>
+<li><a href="#removed-mapperbuilderenableflexiblecasting">Removed <code>MapperBuilder::enableFlexibleCasting()</code></a></li>
+<li><a href="#removed-mapperbuilderalter">Removed <code>MapperBuilder::alter()</code></a></li>
+<li><a href="#add-pure-markers-to-mapperbuilder-and-normalizerbuilder-methods">Add <code>@pure</code> markers to <code>MapperBuilder</code> and <code>NormalizerBuilder</code> methods</a></li>
+<li><a href="#removed-classes-and-interfaces">Removed classes and interfaces</a></li>
+<li><a href="#class-constructors-marked-as-internal">Class constructors marked as <code>@internal</code></a></li>
+</ul>
+<h3 id="changes-to-messageserrors-handling">Changes to messages/errors handling<a class="headerlink" href="#changes-to-messageserrors-handling" title="Permanent link">&para;</a></h3>
+<p>Some changes have been made to the way messages and errors are handled.</p>
+<p>It is now easier to fetch messages when error(s) occur during mapping:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">try</span> <span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span><span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="cm">/* … */</span><span class="p">);</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">\CuyZ\Valinor\Mapper\MappingError</span> <span class="nv">$error</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="c1">// Before (1.x):</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="nv">$messages</span> <span class="o">=</span> <span class="nx">\CuyZ\Valinor\Mapper\Tree\Message\Messages</span><span class="o">::</span><span class="na">flattenFromNode</span><span class="p">(</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        <span class="nv">$error</span><span class="o">-&gt;</span><span class="na">node</span><span class="p">()</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="p">);</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="c1">// After (2.x):</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="nv">$messages</span> <span class="o">=</span> <span class="nv">$error</span><span class="o">-&gt;</span><span class="na">messages</span><span class="p">();</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">}</span>
+</code></pre></div>
+<p>Some methods to access information from the message have been moved:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Before (1.x):</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nv">$name</span> <span class="o">=</span> <span class="nv">$message</span><span class="o">-&gt;</span><span class="na">node</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">();</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nv">$path</span> <span class="o">=</span> <span class="nv">$message</span><span class="o">-&gt;</span><span class="na">node</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">path</span><span class="p">();</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nv">$type</span> <span class="o">=</span> <span class="nv">$message</span><span class="o">-&gt;</span><span class="na">node</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">type</span><span class="p">();</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nv">$type</span> <span class="o">=</span> <span class="nv">$message</span><span class="o">-&gt;</span><span class="na">node</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">sourceValue</span><span class="p">();</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1">// After (2.x):</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="nv">$name</span> <span class="o">=</span> <span class="nv">$message</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">();</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="nv">$path</span> <span class="o">=</span> <span class="nv">$message</span><span class="o">-&gt;</span><span class="na">path</span><span class="p">();</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="nv">$type</span> <span class="o">=</span> <span class="nv">$message</span><span class="o">-&gt;</span><span class="na">type</span><span class="p">();</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="nv">$type</span> <span class="o">=</span> <span class="nv">$message</span><span class="o">-&gt;</span><span class="na">sourceValue</span><span class="p">();</span>
+</code></pre></div>
+<h3 id="changes-to-messages-codes">Changes to messages codes<a class="headerlink" href="#changes-to-messages-codes" title="Permanent link">&para;</a></h3>
+<p>Codes have been changed for all messages that can be thrown during mapping. They
+now are way more expressive. Here is the exhaustive list of changes and their
+replacements:</p>
+<ul>
+<li><code>1642183169</code> → <code>cannot_find_object_builder</code></li>
+<li><code>1632903281</code> → <code>invalid_source</code></li>
+<li><code>1607027306</code> → <code>cannot_resolve_type_from_union</code></li>
+<li><code>1654273010</code> → <code>invalid_list_key</code></li>
+<li><code>1630678334</code> → <code>invalid_value</code></li>
+<li><code>1630946163</code> → <code>invalid_array_key</code></li>
+<li><code>1655449641</code> → <code>missing_value</code></li>
+<li><code>1736015505</code> → <code>value_is_empty_array</code></li>
+<li><code>1736015714</code> → <code>value_is_empty_list</code></li>
+<li><code>1710263908</code> → <code>value_is_not_null</code></li>
+<li><code>1618739163</code> → <code>value_is_not_iterable</code></li>
+<li><code>1710262975</code> → <code>too_many_resolved_types_from_union</code></li>
+<li><code>1655117782</code> → <code>unexpected_keys</code></li>
+<li><code>1630686564</code> → <code>cannot_parse_datetime_format</code></li>
+</ul>
+<p>Note that a lot of error messages related to invalid scalar values mapping now
+have a specific code, where it used to be <code>unknown</code>.</p>
+<h3 id="introduced-normalizerbuilder-as-the-main-entry-for-normalizers">Introduced <code>NormalizerBuilder</code> as the main entry for normalizers<a class="headerlink" href="#introduced-normalizerbuilder-as-the-main-entry-for-normalizers" title="Permanent link">&para;</a></h3>
+<p>The <code>NormalizerBuilder</code> class has been introduced and will now be the main entry
+to instantiate normalizers. Therefore, the methods in <code>MapperBuilder</code> that used
+to configure and return normalizers have been removed.</p>
+<p>This decision aims to make a clear distinction between the mapper and the
+normalizer configuration API, where confusion could arise when using both
+services.</p>
+<p>The <code>NormalizerBuilder</code> can be used like this:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nv">$normalizer</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\NormalizerBuilder</span><span class="p">())</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="o">-&gt;</span><span class="na">registerTransformer</span><span class="p">(</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        <span class="nx">fn</span> <span class="p">(</span><span class="nx">\DateTimeInterface</span> <span class="nv">$date</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nv">$date</span><span class="o">-&gt;</span><span class="na">format</span><span class="p">(</span><span class="s1">&#39;Y/m/d&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="p">)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="o">-&gt;</span><span class="na">normalizer</span><span class="p">(</span><span class="nx">\CuyZ\Valinor\Normalizer\Format</span><span class="o">::</span><span class="na">array</span><span class="p">())</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="o">-&gt;</span><span class="na">normalize</span><span class="p">(</span><span class="nv">$someData</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="removed-simple-cache-psr-16-handling">Removed Simple Cache (PSR-16) handling<a class="headerlink" href="#removed-simple-cache-psr-16-handling" title="Permanent link">&para;</a></h3>
+<p>The Simple Cache PSR requirement has been removed from the library. This means
+that external PSR implementations can no longer be used with this library.</p>
+<p>This decision was taken because entries that were cached were always generated
+PHP code, which is not what PSR is meant for. This led to confusion and
+incorrect behavior when using the library with a custom implementation.</p>
+<p>The library now uses its own cache interface, but the provided implementations
+did not change, thus the upgrade should be pretty straightforward.</p>
+<p>As a reminder, this is how cache should be injected in your applications:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nv">$cache</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\CuyZ\Valinor\Cache\FileSystemCache</span><span class="p">(</span><span class="s1">&#39;path/to/cache-directory&#39;</span><span class="p">);</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">if</span> <span class="p">(</span><span class="nv">$isApplicationInDevelopmentEnvironment</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="nv">$cache</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">\CuyZ\Valinor\Cache\FileWatchingCache</span><span class="p">(</span><span class="nv">$cache</span><span class="p">);</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">}</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">(</span><span class="k">new</span> <span class="nx">\CuyZ\Valinor\MapperBuilder</span><span class="p">())</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="o">-&gt;</span><span class="na">withCache</span><span class="p">(</span><span class="nv">$cache</span><span class="p">)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="o">-&gt;</span><span class="na">mapper</span><span class="p">()</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>    <span class="o">-&gt;</span><span class="na">map</span><span class="p">(</span><span class="nx">SomeClass</span><span class="o">::</span><span class="na">class</span><span class="p">,</span> <span class="p">[</span><span class="cm">/* … */</span><span class="p">]);</span>
+</code></pre></div>
+<p>Also note that this change led to a refactor that should improve confidence for
+the file watching feature: before, the cache entries were sometimes not
+invalidated properly when files changed during development. This should now be
+better.</p>
+<h3 id="removed-mapperbuilderenableflexiblecasting">Removed <code>MapperBuilder::enableFlexibleCasting()</code><a class="headerlink" href="#removed-mapperbuilderenableflexiblecasting" title="Permanent link">&para;</a></h3>
+<p>This method is removed in favor of three distinct modes:</p>
+<ul>
+<li><a href="../../usage/type-strictness-and-flexibility/#allowing-scalar-value-casting"><code>MapperBuilder::allowScalarValueCasting()</code></a></li>
+<li><a href="../../usage/type-strictness-and-flexibility/#allowing-non-sequential-lists"><code>MapperBuilder::allowNonSequentialList()</code></a></li>
+<li><a href="../../usage/type-strictness-and-flexibility/#allowing-undefined-values"><code>MapperBuilder::allowUndefinedValues()</code></a></li>
+</ul>
+<p>The methods above should be used to fit more specific use cases.</p>
+<h3 id="removed-mapperbuilderalter">Removed <code>MapperBuilder::alter()</code><a class="headerlink" href="#removed-mapperbuilderalter" title="Permanent link">&para;</a></h3>
+<p>This feature has been removed in favor of <a href="../../how-to/convert-input/">mapper converters</a> which are more
+flexible and powerful.</p>
+<p>Note that the <code>MapperBuilder::alter()</code> was never really documented, so there are
+good chances that only a few users were using it.</p>
+<h3 id="add-pure-markers-to-mapperbuilder-and-normalizerbuilder-methods">Add <code>@pure</code> markers to <code>MapperBuilder</code> and <code>NormalizerBuilder</code> methods<a class="headerlink" href="#add-pure-markers-to-mapperbuilder-and-normalizerbuilder-methods" title="Permanent link">&para;</a></h3>
+<p>The <code>@pure</code> annotations were removed in a previous commit for the following
+reasons:</p>
+<blockquote>
+<p>Due to the current overhead required to make PHPStan and Psalm work with the
+pure feature, these requirements have been removed.</p>
+<p>Since PHPStan and Psalm are unfortunately unable to automatically detect
+whether callable values provided to <code>MapperBuilder</code> are pure, users are forced
+to manually add <code>@pure</code> annotations.</p>
+<p>This decision aims to strike a fair balance between the library's strictness
+and user experience.</p>
+</blockquote>
+<p>After a discussion with <code>@pure</code> aficionados, the decision has been made to
+re-introduce them. This time, is is possible to easily suppress the errors
+reported by PHPStan and Psalm by using plugins provided out of the box by this
+library.</p>
+<p>To globally suppress these errors in PHPStan, the following line must be added
+to <code>phpstan.neon</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">includes</span><span class="p">:</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vendor/cuyz/valinor/qa/PHPStan/valinor-phpstan-suppress-pure-errors.php</span>
+</code></pre></div>
+<p>To globally suppress these errors in Psalm, the following line must be added to
+<code>psalm.xml</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">&lt;xi:include</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;qa/Psalm/valinor-psalm-suppress-pure-errors.xml&quot;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">            </span><span class="na">xmlns:xi=</span><span class="s">&quot;http://www.w3.org/2001/XInclude&quot;</span><span class="nt">/&gt;</span>
+</code></pre></div>
+<h3 id="removed-classes-and-interfaces">Removed classes and interfaces<a class="headerlink" href="#removed-classes-and-interfaces" title="Permanent link">&para;</a></h3>
+<p>The following classes/interfaces were part of the initial release but were
+unused by the library. Although no one should have used them, they were part of
+the public API so removing them is a breaking change.</p>
+<ul>
+<li><code>\CuyZ\Valinor\Mapper\Source\IdentifiableSource</code></li>
+<li><code>\CuyZ\Valinor\Utility\Priority\HasPriority</code></li>
+<li><code>\CuyZ\Valinor\Utility\Priority\PrioritizedList</code></li>
+</ul>
+<h3 id="class-constructors-marked-as-internal">Class constructors marked as <code>@internal</code><a class="headerlink" href="#class-constructors-marked-as-internal" title="Permanent link">&para;</a></h3>
+<p>Some constructors have been marked as <code>@internal</code>, to ease future maintenance by
+allowing changes to these methods without breaking the public API.</p>
+<p>This change should not affect users as they should not be directly using these
+anyway.</p>
+<p>List of affected constructors:</p>
+<ul>
+<li><code>\CuyZ\Valinor\Mapper\Tree\Message\Messages::__construct</code></li>
+<li><code>\CuyZ\Valinor\Mapper\Tree\Message\NodeMessage::__construct</code></li>
+<li><code>\CuyZ\Valinor\Normalizer\ArrayNormalizer::__construct</code></li>
+<li><code>\CuyZ\Valinor\Normalizer\JsonNormalizer::__construct</code></li>
+<li><code>\CuyZ\Valinor\Normalizer\StreamNormalizer::__construct</code></li>
+</ul>
+<h3 id="full-list-of-breaking-changes">Full list of breaking changes<a class="headerlink" href="#full-list-of-breaking-changes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Removed <code>\Psr\SimpleCache\CacheInterface</code> dependency</li>
+<li>Removed <code>\CuyZ\Valinor\MapperBuilder::alter()</code><ul>
+<li>Use <code>\CuyZ\Valinor\MapperBuilder::registerConverter</code> instead </li>
+</ul>
+</li>
+<li>Removed <code>\CuyZ\Valinor\MapperBuilder::enableFlexibleCasting()</code><ul>
+<li>Use the following methods instead:<ul>
+<li><code>\CuyZ\Valinor\MapperBuilder::allowScalarValueCasting()</code></li>
+<li><code>\CuyZ\Valinor\MapperBuilder::allowNonSequentialList()</code></li>
+<li><code>\CuyZ\Valinor\MapperBuilder::allowUndefinedValues()</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Removed <code>\CuyZ\Valinor\MapperBuilder::registerTransformer()</code><ul>
+<li>Use <code>\CuyZ\Valinor\NormalizerBuilder</code> instead</li>
+</ul>
+</li>
+<li>Removed <code>\CuyZ\Valinor\MapperBuilder::normalizer()</code><ul>
+<li>Use <code>\CuyZ\Valinor\NormalizerBuilder</code> instead</li>
+</ul>
+</li>
+<li>Renamed <code>\CuyZ\Valinor\MapperBuilder::warmup()</code> to
+  <code>\CuyZ\Valinor\MapperBuilder::warmupCacheFor()</code></li>
+<li>Removed <code>\CuyZ\Valinor\Mapper\MappingError::node()</code><ul>
+<li>Use <code>\CuyZ\Valinor\Mapper\MappingError::messages()</code> instead</li>
+</ul>
+</li>
+<li>Added <code>\CuyZ\Valinor\Mapper\MappingError::type()</code></li>
+<li>Added <code>\CuyZ\Valinor\Mapper\MappingError::source()</code></li>
+<li>Removed <code>\CuyZ\Valinor\Mapper\Tree\Node</code></li>
+<li>Removed <code>\CuyZ\Valinor\Mapper\Tree\NodeTraverser</code></li>
+<li>Removed <code>\CuyZ\Valinor\Mapper\Tree\Message\Messages::flattenFromNode()</code></li>
+<li>Removed <code>\CuyZ\Valinor\Mapper\Tree\Message\NodeMessage::node()</code><ul>
+<li>Use the following methods instead:<ul>
+<li><code>\CuyZ\Valinor\Mapper\Tree\Message\NodeMessage::name()</code></li>
+<li><code>\CuyZ\Valinor\Mapper\Tree\Message\NodeMessage::path()</code></li>
+<li><code>\CuyZ\Valinor\Mapper\Tree\Message\NodeMessage::type()</code></li>
+<li><code>\CuyZ\Valinor\Mapper\Tree\Message\NodeMessage::sourceValue()</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Changed <code>\CuyZ\Valinor\Mapper\Tree\Message\NodeMessage::__construct()</code> signature</li>
+<li>Removed <code>\CuyZ\Valinor\Mapper\Source\IdentifiableSource</code></li>
+<li>Removed <code>\CuyZ\Valinor\Utility\Priority\HasPriority</code></li>
+<li>Removed <code>\CuyZ\Valinor\Utility\Priority\PrioritizedList</code></li>
+<li>Mark <code>\CuyZ\Valinor\Mapper\Tree\Message\Messages::__construct</code> as <code>@internal</code></li>
+<li>Mark <code>\CuyZ\Valinor\Mapper\Tree\Message\NodeMessage::__construct</code> as <code>@internal</code></li>
+<li>Mark <code>\CuyZ\Valinor\Normalizer\ArrayNormalizer::__construct</code> as <code>@internal</code></li>
+<li>Mark <code>\CuyZ\Valinor\Normalizer\JsonNormalizer::__construct</code> as <code>@internal</code></li>
+<li>Mark <code>\CuyZ\Valinor\Normalizer\StreamNormalizer::__construct</code> as <code>@internal</code></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/CuyZ" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://cuyz.io" target="_blank" rel="noopener" title="cuyz.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.indexes", "navigation.instant", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
