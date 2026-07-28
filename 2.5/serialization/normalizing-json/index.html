@@ -1757,7 +1757,7 @@ memory-efficient when using generators — for instance when querying a database
 <h2 id="passing-json_encode-flags">Passing <code>json_encode</code> flags<a class="headerlink" href="#passing-json_encode-flags" title="Permanent link">&para;</a></h2>
 <p>By default, the JSON normalizer will only use <code>JSON_THROW_ON_ERROR</code> to encode
 non-boolean scalar values. There might be use-cases where projects will need
-flags like <code>JSON_JSON_PRESERVE_ZERO_FRACTION</code>.</p>
+flags like <code>JSON_PRESERVE_ZERO_FRACTION</code>.</p>
 <p>This can be achieved by passing these flags to the
 <code>JsonNormalizer::withOptions()</code> method:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">namespace</span> <span class="nx">My\App</span><span class="p">;</span>
